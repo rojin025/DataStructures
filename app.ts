@@ -1,5 +1,5 @@
 import { isSame, sameFrequency } from "./sameFrequency";
-import { wakeUp } from "./recursion";
+import { wakeUp, countDown, factorial, collectOddNum } from "./recursion";
 
 // console.log("App Running");
 
@@ -26,4 +26,13 @@ O(n)
 // console.log(sameFrequency(22, 222)); // false
 
 // ##########################################################################################
-wakeUp();
+// Recursion
+
+// wakeUp();
+// countDown(3);
+// countDown(10);
+
+// console.log(factorial(3));
+// console.log(factorial(-3));
+
+console.log(collectOddNum([1, 2, 3, 4, 5, 6]));
