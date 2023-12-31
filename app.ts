@@ -1,4 +1,5 @@
 import { isSame, sameFrequency } from "./sameFrequency";
+import { wakeUp } from "./recursion";
 
 // console.log("App Running");
 
@@ -23,3 +24,6 @@ O(n)
 // console.log(sameFrequency(34, 14)); // false
 // console.log(sameFrequency(3589578, 5879385)); // true
 // console.log(sameFrequency(22, 222)); // false
+
+// ##########################################################################################
+wakeUp();
