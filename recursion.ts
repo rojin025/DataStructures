@@ -47,3 +47,11 @@ export function collectOddNum(arr: number[]): number[] {
   helper(arr);
   return result;
 }
+
+export function collectEvenNum(arr: number[]): number[] {
+  let result: number[] = [];
+
+  if (arr.length === 0) return arr;
+  if (arr[0] % 2 === 0) result.push(arr[0]);
+  return result.concat(collectEvenNum(arr.splice(1)));
+}

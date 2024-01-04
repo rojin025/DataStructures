@@ -1,5 +1,12 @@
 import { isSame, sameFrequency } from "./sameFrequency";
-import { wakeUp, countDown, factorial, collectOddNum } from "./recursion";
+import {
+  wakeUp,
+  countDown,
+  factorial,
+  collectOddNum,
+  collectEvenNum,
+} from "./recursion";
+import { singleLinkedList } from "./singleLinkedList";
 
 // console.log("App Running");
 
@@ -26,7 +33,7 @@ O(n)
 // console.log(sameFrequency(22, 222)); // false
 
 // ##########################################################################################
-// Recursion
+/** Recursion */
 
 // wakeUp();
 // countDown(3);
@@ -35,4 +42,9 @@ O(n)
 // console.log(factorial(3));
 // console.log(factorial(-3));
 
-console.log(collectOddNum([1, 2, 3, 4, 5, 6]));
+// console.log(collectOddNum([1, 2, 3, 4, 5, 6]));
+// console.log(collectEvenNum([1, 2, 3, 4, 5, 6]));
+
+/** Single Linked List */
+// ##########################################################################################
+singleLinkedList();
