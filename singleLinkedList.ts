@@ -7,7 +7,7 @@ export function singleLinkedList() {
 // Creating Objects from class
 // Class
  */
-class Student {
+export class Student {
   grade: number;
   #tardies: number = 0;
   #scores: number[] = [];
@@ -30,18 +30,24 @@ class Student {
     this.#scores.push(score);
     return this.#scores;
   }
+  averageScore() {
+    const sum = this.#scores.reduce((total, curr) => total + curr, 0);
+    console.log("Total", sum);
+    return sum / this.#scores.length;
+  }
 }
 
-// instanciation
-const ram = new Student("Ram", "Baral", 2);
-const shyam = new Student("Shyam", "Gurung", 3);
+// Static Method
+export class Point {
+  constructor(private x: number, private y: number) {}
 
-console.log(ram);
-console.log(ram.addScore(80));
-console.log(ram.addScore(90));
-// console.log(ram.markLate());
-// console.log(ram.markLate());
-// console.log(shyam.fullName());
+  static distance(a: Point, b: Point) {
+    const dx = a.x - b.x;
+    const dy = a.y - b.y;
+
+    return Math.hypot(dx, dy);
+  }
+}
 
 /**
 // ########################################################################################################
