@@ -2,6 +2,52 @@ export function singleLinkedList() {
   console.log("singleLinked list Conneected");
 }
 
+/**
+// ########################################################################################################
+// Creating Objects from class
+// Class
+ */
+class Student {
+  grade: number;
+  #tardies: number = 0;
+  #scores: number[] = [];
+  constructor(
+    private firstName: string,
+    private lastname: string,
+    year: number
+  ) {
+    this.grade = year;
+  }
+  fullName() {
+    return `Name: ${this.firstName} ${this.lastname}`;
+  }
+  markLate() {
+    this.#tardies += 1;
+    if (this.#tardies >= 3) return "You are Expelled!";
+    return `${this.firstName} is late ${this.#tardies}`;
+  }
+  addScore(score: number) {
+    this.#scores.push(score);
+    return this.#scores;
+  }
+}
+
+// instanciation
+const ram = new Student("Ram", "Baral", 2);
+const shyam = new Student("Shyam", "Gurung", 3);
+
+console.log(ram);
+console.log(ram.addScore(80));
+console.log(ram.addScore(90));
+// console.log(ram.markLate());
+// console.log(ram.markLate());
+// console.log(shyam.fullName());
+
+/**
+// ########################################################################################################
+// 
+// 
+ */
 // piece of data - val
 //reference to next node - next
 
