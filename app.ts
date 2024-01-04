@@ -6,7 +6,7 @@ import {
   collectOddNum,
   collectEvenNum,
 } from "./recursion";
-import { Point, singleLinkedList, Student } from "./singleLinkedList";
+import { Point, singleLinkedList, Student } from "./classRevision";
 
 // console.log("App Running");
 
@@ -74,3 +74,4 @@ const p1 = new Point(5, 5);
 const p2 = new Point(10, 10);
 
 console.log(Point.distance(p1, p2));
+console.log(Point.calculatePoints());
