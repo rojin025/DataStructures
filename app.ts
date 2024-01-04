@@ -7,6 +7,7 @@ import {
   collectEvenNum,
 } from "./recursion";
 import { Point, singleLinkedList, Student } from "./classRevision";
+import { SingleLinkedList } from "./singleLinkedList";
 
 // console.log("App Running");
 
@@ -70,8 +71,19 @@ O(n)
 // ########################################################################################################
 // Static implementation
  */
-const p1 = new Point(5, 5);
-const p2 = new Point(10, 10);
+// const p1 = new Point(5, 5);
+// const p2 = new Point(10, 10);
 
-console.log(Point.distance(p1, p2));
-console.log(Point.calculatePoints());
+// console.log(Point.distance(p1, p2));
+// console.log(Point.calculatePoints());
+
+/**
+// ########################################################################################################
+// Single Linked list
+ */
+const list = new SingleLinkedList();
+console.log(list);
+list.push(1);
+list.push(2);
+list.push(3);
+console.log(list);
