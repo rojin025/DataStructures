@@ -96,20 +96,51 @@ export class SingleLinkedList {
     return true;
   }
 
-  insert(index: number, value: number) {
+  // insert is not working
+  insert(index: number, value: number): boolean {
     if (index < 0 || index > this.length) return false;
     if (index === this.length) return !!this.push(value);
     if (index === 0) return !!this.unshift(value);
 
-    index--;
-    const targetNode = this.get(index);
     const newNode = new ListNode(value);
+    console.log(newNode);
+    // index--;
+    const targetNode = this.get(index);
+
     if (targetNode?.next) {
       let temp = targetNode.next;
-      newNode.next = targetNode?.next;
+      newNode.next = targetNode.next;
       targetNode.next = temp;
+      this.length++;
+      console.log(newNode);
+      console.log(targetNode);
+      return true;
+    } else {
+      return false;
     }
-    this.length++;
-    return true;
+  }
+
+  remove(index: number): boolean | ListNode {
+    if (index < 0 || index >= this.length) return false;
+    if (index === this.length - 1) return !!this.pop();
+    if (index === 0) return !!this.shift();
+
+    const prevNode = this.get(--index);
+    if (prevNode?.next) {
+      const removedNode = prevNode.next;
+      prevNode.next = removedNode.next;
+      this.length--;
+      return removedNode;
+    } else return false;
+  }
+
+  print() {
+    let arr: number[] = [];
+    let current = this.head;
+    while (current) {
+      arr.push(current.value);
+      current = current.next;
+    }
+    console.log("Output:", arr);
   }
 }

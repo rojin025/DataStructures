@@ -92,5 +92,6 @@ list.push(3);
 // console.log("Get --> ", list.get(-20));
 // console.log("Set --> ", list.set(-12, 4));
 // console.log("Set --> ", list.set(2, 4));
-console.log("Insert --> ", list.insert(2, 2.5));
-console.log(list);
+// console.log("Remove --> ", list.remove(1));
+// console.log(list);
+list.print();
