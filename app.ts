@@ -82,8 +82,15 @@ O(n)
 // Single Linked list
  */
 const list = new SingleLinkedList();
-console.log(list);
 list.push(1);
 list.push(2);
 list.push(3);
+// console.log(list);
+// console.log("Get --> ", list.get(0));
+// console.log("Get --> ", list.get(1));
+// console.log("Get --> ", list.get(2));
+// console.log("Get --> ", list.get(-20));
+// console.log("Set --> ", list.set(-12, 4));
+// console.log("Set --> ", list.set(2, 4));
+console.log("Insert --> ", list.insert(2, 2.5));
 console.log(list);
