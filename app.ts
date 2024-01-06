@@ -8,6 +8,7 @@ import {
 } from "./recursion";
 import { Point, singleLinkedList, Student } from "./classRevision";
 import { SingleLinkedList } from "./singleLinkedList";
+import { NodeDLL, DoubleLinkedList } from "./DoubleLinkedList";
 
 // console.log("App Running");
 
@@ -97,3 +98,25 @@ O(n)
 // list.print();
 // list.reverse();
 // list.print();
+
+/**
+// ########################################################################################################
+// Double Linked list
+ */
+
+// // Checking NodeDLL
+// let first = new NodeDLL(1);
+// let second = new NodeDLL(2);
+
+// first.next = second;
+// second.prev = first;
+
+// console.log(first);
+// console.log(second);
+
+let list = new DoubleLinkedList();
+
+list.push(10);
+list.push(20);
+list.push(30);
+console.log(list);
