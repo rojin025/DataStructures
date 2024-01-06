@@ -95,3 +95,5 @@ list.push(3);
 // console.log("Remove --> ", list.remove(1));
 // console.log(list);
 list.print();
+list.reverse();
+list.print();

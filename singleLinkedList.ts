@@ -143,4 +143,24 @@ export class SingleLinkedList {
     }
     console.log("Output:", arr);
   }
+
+  // Watch 128
+  reverse() {
+    let node = this.head;
+    this.head = this.tail;
+    this.tail = node;
+    // let next: null | ListNode = null;
+    let next = node;
+    let prev: null | ListNode = null;
+
+    for (let i = 0; i < this.length; i++) {
+      if (node) {
+        next = node.next;
+        node.next = prev;
+        prev = node;
+        node = next;
+      }
+    }
+    return this;
+  }
 }
