@@ -114,11 +114,11 @@ O(n)
 // console.log(first);
 // console.log(second);
 
-let list = new DoubleLinkedList();
+// let list = new DoubleLinkedList();
 
-list.push(10);
-list.push(20);
-list.push(30);
+// list.push(10);
+// list.push(20);
+// list.push(30);
 // list.push(40);
 // list.push(50);
 // console.log(list);
@@ -179,6 +179,21 @@ list.push(30);
 // console.log(list);
 
 /** Remove  */
+// console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+// console.log(list.remove(13));
+// console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+// console.log(list.remove(-13));
+// console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+// console.log(list.remove(0));
+// console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+// console.log(list.remove(2));
+// console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+// console.log(list.remove(1));
+// console.log("=========================================================");
+// console.log(list);
+
+/** Stack  */
+/** push and Pop  */
 // console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
 // console.log(list.remove(13));
 // console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
