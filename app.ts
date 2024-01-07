@@ -9,6 +9,7 @@ import {
 import { Point, singleLinkedList, Student } from "./classRevision";
 import { SingleLinkedList } from "./singleLinkedList";
 import { NodeDLL, DoubleLinkedList } from "./DoubleLinkedList";
+import { Stack } from "./stack";
 
 // console.log("App Running");
 
@@ -194,15 +195,18 @@ O(n)
 
 /** Stack  */
 /** push and Pop  */
-// console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
-// console.log(list.remove(13));
-// console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
-// console.log(list.remove(-13));
-// console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
-// console.log(list.remove(0));
-// console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
-// console.log(list.remove(2));
-// console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
-// console.log(list.remove(1));
-// console.log("=========================================================");
-// console.log(list);
+let stack = new Stack();
+console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+console.log(stack);
+console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+console.log(stack.push(3));
+console.log(stack.push(2));
+console.log(stack.push(1));
+console.log(stack);
+console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+console.log("Poping ---> ", stack.pop());
+console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+console.log("Poping ---> ", stack.pop());
+console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+console.log("Poping ---> ", stack.pop());
+console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++");

@@ -28,17 +28,14 @@ export class Stack {
     return ++this.size;
   }
 
-  pop(): NodeStack | null {
+  pop(): number | null {
     if (!this.first) return null;
     let oldFirst = this.first;
-    if ((this.size = 1)) {
-      this.first = null;
+    if (this.first === this.last) {
       this.last = null;
-    } else {
-      this.first = oldFirst.next;
-      oldFirst.next = null;
     }
+    this.first = oldFirst.next;
     this.size--;
-    return oldFirst;
+    return oldFirst.value;
   }
 }
