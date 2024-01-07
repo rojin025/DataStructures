@@ -10,6 +10,7 @@ import { Point, singleLinkedList, Student } from "./classRevision";
 import { SingleLinkedList } from "./singleLinkedList";
 import { NodeDLL, DoubleLinkedList } from "./DoubleLinkedList";
 import { Stack } from "./stack";
+import { Queue } from "./queue";
 
 // console.log("App Running");
 
@@ -193,20 +194,63 @@ O(n)
 // console.log("=========================================================");
 // console.log(list);
 
-/** Stack  */
-/** push and Pop  */
-let stack = new Stack();
+// /** Stack  */
+// /** push and Pop  */
+// let stack = new Stack();
+// console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+// console.log(stack);
+// console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+// console.log(stack.push(3));
+// console.log(stack.push(2));
+// console.log(stack.push(1));
+// console.log(stack);
+// console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+// console.log("Poping ---> ", stack.pop());
+// console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+// console.log("Poping ---> ", stack.pop());
+// console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+// console.log("Poping ---> ", stack.pop());
+// console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+
+/** Queue  */
+/** Array push and shift  */
+// console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+
+// let q: number[] = [];
+// q.push(1);
+// q.push(2);
+// q.push(3);
+// console.log("Queue", q);
+// console.log("shift ->", q.shift());
+// console.log("shift ->", q.shift());
+// console.log("shift ->", q.shift());
+// console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+
+/** Array unshift and pop  */
+// console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+
+// let q: number[] = [];
+// q.unshift(1);
+// q.unshift(2);
+// q.unshift(3);
+// console.log("Queue", q);
+// console.log("Pop ->", q.pop());
+// console.log("Pop ->", q.pop());
+// console.log("Pop ->", q.pop());
+// console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+
+/** SingleLinkedList Queue  */
+let queue = new Queue();
+
 console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
-console.log(stack);
+console.log(queue.enqueue(1));
+console.log(queue.enqueue(2));
+console.log(queue.enqueue(3));
+console.log(queue);
 console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
-console.log(stack.push(3));
-console.log(stack.push(2));
-console.log(stack.push(1));
-console.log(stack);
+console.log("Dequeuing ---> ", queue.dequeue());
 console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
-console.log("Poping ---> ", stack.pop());
+console.log("Dequeuing ---> ", queue.dequeue());
 console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
-console.log("Poping ---> ", stack.pop());
-console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
-console.log("Poping ---> ", stack.pop());
+console.log("Dequeuing ---> ", queue.dequeue());
 console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
