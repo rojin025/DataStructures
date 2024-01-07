@@ -141,5 +141,25 @@ export class DoubleLinkedList {
     } else return false;
   }
 
-  remove() {}
+  remove(index: number): boolean | NodeDLL | null {
+    if (index < 0 || index > this.length) return false;
+    if (index === 0) return this.shift();
+    if (index === this.length - 1) return this.pop();
+
+    let leftNode = this.get(index - 1);
+    if (leftNode?.next) {
+      let removedNode = leftNode.next;
+      let rightNode = removedNode.next;
+
+      // New Connection
+      leftNode.next = rightNode;
+      if (rightNode?.prev) rightNode.prev = leftNode;
+      // removed Connection
+      removedNode.next = null;
+      removedNode.prev = null;
+
+      this.length--;
+      return removedNode;
+    } else return false;
+  }
 }

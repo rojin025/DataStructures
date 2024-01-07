@@ -119,9 +119,9 @@ let list = new DoubleLinkedList();
 list.push(10);
 list.push(20);
 list.push(30);
-list.push(40);
-list.push(50);
-console.log(list);
+// list.push(40);
+// list.push(50);
+// console.log(list);
 
 /** Pop */
 // console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
@@ -180,14 +180,14 @@ console.log(list);
 
 /** Remove  */
 // console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
-// console.log(list.insert(5, 60));
+// console.log(list.remove(13));
 // console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
-// console.log(list.insert(0, 1));
+// console.log(list.remove(-13));
 // console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
-// console.log(list.insert(13, 1));
+// console.log(list.remove(0));
 // console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
-// console.log(list.insert(1, 20));
+// console.log(list.remove(2));
 // console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
-// console.log(list.insert(3, 35));
-// console.log("++++++++++++++++++");
+// console.log(list.remove(1));
+// console.log("=========================================================");
 // console.log(list);
