@@ -119,6 +119,8 @@ let list = new DoubleLinkedList();
 list.push(10);
 list.push(20);
 list.push(30);
+list.push(40);
+list.push(50);
 console.log(list);
 
 // // pop
@@ -142,5 +144,21 @@ console.log(list);
 // console.log(list.unshift(12));
 // console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
 // console.log(list.unshift(10));
+// console.log("++++++++++++++++++");
+// console.log(list);
+
+/** Get  */
+// console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+// console.log(list.get(3));
+// console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+// console.log(list.get(10));
+// console.log("++++++++++++++++++");
+// console.log(list);
+
+/** Set  */
+console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+// console.log(list.set(3));
+// console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+// console.log(list.get(10));
 // console.log("++++++++++++++++++");
 // console.log(list);

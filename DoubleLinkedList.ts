@@ -88,4 +88,25 @@ export class DoubleLinkedList {
     this.length++;
     return this;
   }
+
+  get(index: number): NodeDLL | null {
+    if (index < 0 || index >= this.length) return null;
+    if (index < this.length / 2) {
+      let leftCounter = 0;
+      let currentNode = this.head;
+      while (leftCounter < index) {
+        if (currentNode?.next) currentNode = currentNode.next;
+        leftCounter++;
+      }
+      return currentNode;
+    } else {
+      let rightCounter = this.length - 1;
+      let currentNode = this.tail;
+      while (rightCounter > index) {
+        if (currentNode?.prev) currentNode = currentNode.prev;
+        rightCounter--;
+      }
+      return currentNode;
+    }
+  }
 }
