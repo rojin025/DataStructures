@@ -71,4 +71,21 @@ export class DoubleLinkedList {
     this.length--;
     return oldHead;
   }
+
+  unshift(value: number): DoubleLinkedList {
+    const newHead = new NodeDLL(value);
+    if (this.length === 0) {
+      this.head = newHead;
+      this.tail = newHead;
+    } else {
+      if (this.head) {
+        this.head.prev = newHead;
+        newHead.next = this.head;
+        this.head = newHead;
+      }
+    }
+
+    this.length++;
+    return this;
+  }
 }

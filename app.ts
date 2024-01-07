@@ -129,10 +129,18 @@ console.log(list);
 // console.log("++++++++++++++++++");
 // console.log(list);
 
-// Shift
-console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
-console.log(list.shift());
-console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
-console.log(list.shift());
-console.log("++++++++++++++++++");
-console.log(list);
+// // Shift
+// console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+// console.log(list.shift());
+// console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+// console.log(list.shift());
+// console.log("++++++++++++++++++");
+// console.log(list);
+
+// // Unshift
+// console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+// console.log(list.unshift(12));
+// console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+// console.log(list.unshift(10));
+// console.log("++++++++++++++++++");
+// console.log(list);
