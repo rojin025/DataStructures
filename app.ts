@@ -121,10 +121,18 @@ list.push(20);
 list.push(30);
 console.log(list);
 
-// pop
+// // pop
+// console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+// console.log(list.pop());
+// console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+// console.log(list.pop());
+// console.log("++++++++++++++++++");
+// console.log(list);
+
+// Shift
 console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
-console.log(list.pop());
+console.log(list.shift());
 console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
-console.log(list.pop());
+console.log(list.shift());
 console.log("++++++++++++++++++");
 console.log(list);

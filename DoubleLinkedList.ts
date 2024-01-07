@@ -52,4 +52,23 @@ export class DoubleLinkedList {
     this.length--;
     return oldTail;
   }
+
+  shift(): NodeDLL | null {
+    if (this.length === 0) return null;
+    let oldHead = this.head;
+
+    if (this.length === 1) {
+      this.head = null;
+      this.tail = null;
+    } else {
+      if (oldHead) {
+        this.head = oldHead.next;
+        if (this.head?.prev) this.head.prev = null;
+        oldHead.next = null;
+      }
+    }
+
+    this.length--;
+    return oldHead;
+  }
 }
