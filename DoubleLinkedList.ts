@@ -109,4 +109,37 @@ export class DoubleLinkedList {
       return currentNode;
     }
   }
+
+  set(index: number, value: number): boolean {
+    let foundNode = this.get(index);
+    if (foundNode) {
+      foundNode.value = value;
+      return true;
+    }
+    return false;
+  }
+
+  insert(index: number, value: number): boolean {
+    if (index < 0 || index > this.length) return false;
+    if (index === 0) return !!this.unshift(value);
+    if (index === this.length) return !!this.push(value);
+
+    let newNode = new NodeDLL(value);
+    let leftNode = this.get(index - 1);
+
+    if (leftNode?.next) {
+      let rightNode = leftNode.next;
+      // Right Connections
+      leftNode.next = newNode;
+      newNode.next = rightNode;
+      // Left Connections
+      rightNode.prev = newNode;
+      newNode.prev = leftNode;
+
+      this.length++;
+      return true;
+    } else return false;
+  }
+
+  remove() {}
 }

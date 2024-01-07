@@ -123,7 +123,7 @@ list.push(40);
 list.push(50);
 console.log(list);
 
-// // pop
+/** Pop */
 // console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
 // console.log(list.pop());
 // console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
@@ -155,10 +155,39 @@ console.log(list);
 // console.log("++++++++++++++++++");
 // console.log(list);
 
-/** Set  */
-console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
-// console.log(list.set(3));
+// /** Set  */
 // console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
-// console.log(list.get(10));
+// console.log(list.set(13, 1));
+// console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+// console.log(list.set(0, 1));
+// console.log(list.set(4, 5));
+// console.log("++++++++++++++++++");
+// console.log(list);
+
+/** Insert  */
+// console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+// console.log(list.insert(5, 60));
+// console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+// console.log(list.insert(0, 1));
+// console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+// console.log(list.insert(13, 1));
+// console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+// console.log(list.insert(1, 20));
+// console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+// console.log(list.insert(3, 35));
+// console.log("++++++++++++++++++");
+// console.log(list);
+
+/** Remove  */
+// console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+// console.log(list.insert(5, 60));
+// console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+// console.log(list.insert(0, 1));
+// console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+// console.log(list.insert(13, 1));
+// console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+// console.log(list.insert(1, 20));
+// console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+// console.log(list.insert(3, 35));
 // console.log("++++++++++++++++++");
 // console.log(list);
