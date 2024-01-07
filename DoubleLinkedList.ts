@@ -36,8 +36,8 @@ export class DoubleLinkedList {
     return this;
   }
 
-  pop() {
-    if (this.head === null) return undefined;
+  pop(): NodeDLL | null {
+    if (!this.head) return null;
     const oldTail = this.tail;
 
     if (this.length === 1) {
@@ -46,6 +46,7 @@ export class DoubleLinkedList {
     } else if (oldTail) {
       this.tail = oldTail.prev;
       if (this.tail) this.tail.next = null;
+      oldTail.prev = null;
     }
 
     this.length--;
