@@ -239,18 +239,43 @@ O(n)
 // console.log("Pop ->", q.pop());
 // console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
 
-/** SingleLinkedList Queue  */
-let queue = new Queue();
+// /** SingleLinkedList Queue  */
+// let queue = new Queue();
 
+// console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+// console.log(queue.enqueue(1));
+// console.log(queue.enqueue(2));
+// console.log(queue.enqueue(3));
+// console.log(queue);
+// console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+// console.log("Dequeuing ---> ", queue.dequeue());
+// console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+// console.log("Dequeuing ---> ", queue.dequeue());
+// console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+// console.log("Dequeuing ---> ", queue.dequeue());
+// console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+
+// /** Binary Search Tree  */
+import { BinarySerachTree } from "./binarySearchTree";
+let bst = new BinarySerachTree();
+
+console.log(bst);
 console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
-console.log(queue.enqueue(1));
-console.log(queue.enqueue(2));
-console.log(queue.enqueue(3));
-console.log(queue);
-console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
-console.log("Dequeuing ---> ", queue.dequeue());
-console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
-console.log("Dequeuing ---> ", queue.dequeue());
-console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
-console.log("Dequeuing ---> ", queue.dequeue());
-console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+bst.insert(10);
+bst.insert(5);
+bst.insert(13);
+bst.insert(11);
+bst.insert(2);
+bst.insert(16);
+bst.insert(7);
+console.log(bst);
+// console.log(queue.enqueue(2));
+// console.log(queue.enqueue(3));
+// console.log(queue);
+// console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+// console.log("Dequeuing ---> ", queue.dequeue());
+// console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+// console.log("Dequeuing ---> ", queue.dequeue());
+// console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+// console.log("Dequeuing ---> ", queue.dequeue());
+// console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
