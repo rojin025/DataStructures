@@ -77,4 +77,37 @@ export class BinarySerachTree {
     }
     return found;
   }
+
+  BFS(): number[] {
+    let queue: NodeBST[] = [];
+    let data: number[] = [];
+    // let value: number;
+    // let value: number | null;
+    let node: NodeBST | null | undefined = this.root;
+
+    if (node) {
+      queue.push(node);
+    }
+    while (queue.length) {
+      node = queue.shift();
+      if (node) data.push(node.value);
+      if (node?.left) queue.push(node.left);
+      if (node?.right) queue.push(node.right);
+    }
+    return data;
+  }
+
+  DFSPreOrder() {
+    let values: number[] = [];
+    let rootNode = this.root;
+    function traverse(node: NodeBST) {
+      values.push(node.value);
+      if (node.left) traverse(node.left);
+      if (node.right) traverse(node.right);
+    }
+    if (rootNode) {
+      traverse(rootNode);
+    }
+    return values;
+  }
 }

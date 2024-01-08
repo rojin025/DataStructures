@@ -257,19 +257,20 @@ O(n)
 
 // /** Binary Search Tree  */
 import { BinarySerachTree } from "./binarySearchTree";
-// let bst = new BinarySerachTree();
+let bst = new BinarySerachTree();
 
 // console.log(bst);
 // console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
-// bst.insert(10);
-// bst.insert(5);
-// bst.insert(13);
-// bst.insert(11);
-// bst.insert(2);
-// bst.insert(16);
-// bst.insert(7);
+bst.insert(10);
+bst.insert(5);
+bst.insert(13);
+bst.insert(11);
+bst.insert(2);
+bst.insert(16);
+bst.insert(7);
 // console.log(bst);
-// console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+
+console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
 
 //        10
 //    5       13
@@ -296,3 +297,6 @@ import { BinarySerachTree } from "./binarySearchTree";
 
 // console.log(bst.findNode(1));
 // console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+
+// /** Breath First Search */
+console.log(bst.BFS());
