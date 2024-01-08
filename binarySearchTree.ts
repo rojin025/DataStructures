@@ -39,4 +39,42 @@ export class BinarySerachTree {
       }
     }
   }
+
+  find(target: number): boolean {
+    if (!this.root) return false;
+    let current = this.root;
+
+    while (true) {
+      if (current.value === target) return true;
+      if (target < current.value) {
+        if (current.left) {
+          current = current.left;
+        } else return false;
+      } else {
+        if (current.right) {
+          current = current.right;
+        } else return false;
+      }
+    }
+  }
+
+  findNode(target: number): NodeBST | boolean {
+    if (!this.root) return false;
+    let current = this.root;
+    let found = false;
+
+    while (current && !found) {
+      if (current.value === target) return current;
+      else if (current.value > target) {
+        if (current.left) {
+          current = current.left;
+        } else return false;
+      } else {
+        if (current.right) {
+          current = current.right;
+        } else return false;
+      }
+    }
+    return found;
+  }
 }

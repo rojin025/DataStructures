@@ -257,25 +257,42 @@ O(n)
 
 // /** Binary Search Tree  */
 import { BinarySerachTree } from "./binarySearchTree";
-let bst = new BinarySerachTree();
+// let bst = new BinarySerachTree();
 
-console.log(bst);
-console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
-bst.insert(10);
-bst.insert(5);
-bst.insert(13);
-bst.insert(11);
-bst.insert(2);
-bst.insert(16);
-bst.insert(7);
-console.log(bst);
-// console.log(queue.enqueue(2));
-// console.log(queue.enqueue(3));
-// console.log(queue);
+// console.log(bst);
 // console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
-// console.log("Dequeuing ---> ", queue.dequeue());
+// bst.insert(10);
+// bst.insert(5);
+// bst.insert(13);
+// bst.insert(11);
+// bst.insert(2);
+// bst.insert(16);
+// bst.insert(7);
+// console.log(bst);
 // console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
-// console.log("Dequeuing ---> ", queue.dequeue());
+
+//        10
+//    5       13
+//  2   7   11  16
+
+// console.log(bst.find(10));
+// console.log(bst.find(5));
+// console.log(bst.find(13));
+// console.log(bst.find(11));
+// console.log(bst.find(2));
+// console.log(bst.find(16));
+// console.log(bst.find(7));
+
+// console.log(bst.find(1));
 // console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
-// console.log("Dequeuing ---> ", queue.dequeue());
+
+// console.log(bst.findNode(10));
+// console.log(bst.findNode(5));
+// console.log(bst.findNode(13));
+// console.log(bst.findNode(11));
+// console.log(bst.findNode(2));
+// console.log(bst.findNode(16));
+// console.log(bst.findNode(7));
+
+// console.log(bst.findNode(1));
 // console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
