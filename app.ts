@@ -255,22 +255,22 @@ O(n)
 // console.log("Dequeuing ---> ", queue.dequeue());
 // console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
 
-// /** Binary Search Tree  */
-import { BinarySerachTree } from "./binarySearchTree";
-let bst = new BinarySerachTree();
+// // /** Binary Search Tree  */
+// import { BinarySerachTree } from "./binarySearchTree";
+// let bst = new BinarySerachTree();
 
-// console.log(bst);
+// // console.log(bst);
+// // console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+// bst.insert(10);
+// bst.insert(5);
+// bst.insert(13);
+// bst.insert(11);
+// bst.insert(2);
+// bst.insert(16);
+// bst.insert(7);
+// // console.log(bst);
+
 // console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
-bst.insert(10);
-bst.insert(5);
-bst.insert(13);
-bst.insert(11);
-bst.insert(2);
-bst.insert(16);
-bst.insert(7);
-// console.log(bst);
-
-console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
 
 //        10
 //    5       13
@@ -298,10 +298,37 @@ console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
 // console.log(bst.findNode(1));
 // console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
 
-// /** Breath First Search */
-console.log(bst.BFS());
-console.log(bst.DFSPreOrder());
+// // /** Breath First Search */
+// console.log(bst.BFS());
+// console.log(bst.DFSPreOrder());
+// console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+// console.log(bst.DSFPostOrder());
+// console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+// console.log(bst.DSFInOrder());
+
+// /** Max Binary Heap */
+
+import { MaxBinaryHeap } from "./maxBinaryHeap";
+let mbh = new MaxBinaryHeap();
+
 console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
-console.log(bst.DSFPostOrder());
+mbh.insert(10);
+mbh.insert(5);
+mbh.insert(13);
+mbh.insert(11);
+mbh.insert(2);
+mbh.insert(16);
+mbh.insert(7);
+console.log(mbh);
 console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
-console.log(bst.DSFInOrder());
+
+//          16
+//    11          13
+//  5     2   10      7
+
+// console.log(bst.BFS());
+// console.log(bst.DFSPreOrder());
+// console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+// console.log(bst.DSFPostOrder());
+// console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+// console.log(bst.DSFInOrder());
