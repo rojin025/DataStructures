@@ -120,4 +120,17 @@ export class BinarySerachTree {
     if (rootNode) traverse(rootNode);
     return values;
   }
+
+  DSFInOrder(): number[] {
+    let values: number[] = [];
+    let rootNode = this.root;
+    function traverse(node: NodeBST) {
+      if (node.left) traverse(node.left);
+      values.push(node.value);
+      if (node.right) traverse(node.right);
+    }
+
+    if (rootNode) traverse(rootNode);
+    return values;
+  }
 }

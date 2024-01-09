@@ -303,3 +303,5 @@ console.log(bst.BFS());
 console.log(bst.DFSPreOrder());
 console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
 console.log(bst.DSFPostOrder());
+console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+console.log(bst.DSFInOrder());
