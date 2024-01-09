@@ -97,7 +97,7 @@ export class BinarySerachTree {
     return data;
   }
 
-  DFSPreOrder() {
+  DFSPreOrder(): number[] {
     let values: number[] = [];
     let rootNode = this.root;
     function traverse(node: NodeBST) {
@@ -105,9 +105,19 @@ export class BinarySerachTree {
       if (node.left) traverse(node.left);
       if (node.right) traverse(node.right);
     }
-    if (rootNode) {
-      traverse(rootNode);
+    if (rootNode) traverse(rootNode);
+    return values;
+  }
+
+  DSFPostOrder(): number[] {
+    let values: number[] = [];
+    let rootNode = this.root;
+    function traverse(node: NodeBST) {
+      if (node.left) traverse(node.left);
+      if (node.right) traverse(node.right);
+      values.push(node.value);
     }
+    if (rootNode) traverse(rootNode);
     return values;
   }
 }

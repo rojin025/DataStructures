@@ -300,3 +300,6 @@ console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
 
 // /** Breath First Search */
 console.log(bst.BFS());
+console.log(bst.DFSPreOrder());
+console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+console.log(bst.DSFPostOrder());
