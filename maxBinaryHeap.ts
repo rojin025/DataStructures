@@ -34,7 +34,7 @@ export class MaxBinaryHeap {
   bubbleDown() {
     let index = 0;
     const length = this.values.length;
-    const element = this.values[0];
+    const element = this.values[index];
     let leftChild: number, rightChild: number;
     let swapIdx: null | number;
 

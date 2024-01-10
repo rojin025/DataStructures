@@ -308,39 +308,44 @@ O(n)
 
 // /** Max Binary Heap */
 
-import { MaxBinaryHeap } from "./maxBinaryHeap";
-let mbh = new MaxBinaryHeap();
+// import { MaxBinaryHeap } from "./maxBinaryHeap";
+// let mbh = new MaxBinaryHeap();
 
-console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
-mbh.insert(10);
-mbh.insert(5);
-mbh.insert(13);
-mbh.insert(11);
-mbh.insert(2);
-mbh.insert(16);
-mbh.insert(7);
+// console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+// mbh.insert(10);
+// mbh.insert(5);
+// mbh.insert(13);
+// mbh.insert(11);
+// mbh.insert(2);
+// mbh.insert(16);
+// mbh.insert(7);
+// console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
 // console.log(mbh);
-console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+// // [ 16, 11, 13, 5, 2, 10,  7]
 
-console.log(mbh);
-// [ 16, 11, 13, 5, 2, 10,  7]
+// //          16
+// //    11          13
+// //  5     2   10      7
 
-console.log(mbh.extractMax());
-console.log(mbh.values);
+// console.log(mbh.extractMax());
 
-//          16
-//    11          13
-//  5     2   10      7
+// //          13
+// //    11          10
+// //  5     2   7
 
-// console.log(bst.BFS());
-// console.log(bst.DFSPreOrder());
-// console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
-// console.log(bst.DSFPostOrder());
-// console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
-// console.log(bst.DSFInOrder());
+// console.log(mbh.values);
+// // [ 13, 11, 7, 5, 2, 10 ]
 
-// [ 13, 11, 7, 5, 2, 10 ]
+/** Priority Queue */
 
-//          13
-//    11          10
-//  5     2   7
+import { PriorityQueue } from "./priorityQueue";
+
+let pq = new PriorityQueue();
+pq.enqueue(10, 5);
+pq.enqueue(5, 5);
+pq.enqueue(13, 3);
+pq.enqueue(11, 3);
+pq.enqueue(2, 5);
+pq.enqueue(16, 1);
+pq.enqueue(7, 5);
+console.log(pq);
