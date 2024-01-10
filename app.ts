@@ -319,8 +319,14 @@ mbh.insert(11);
 mbh.insert(2);
 mbh.insert(16);
 mbh.insert(7);
-console.log(mbh);
+// console.log(mbh);
 console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+
+console.log(mbh);
+// [ 16, 11, 13, 5, 2, 10,  7]
+
+console.log(mbh.extractMax());
+console.log(mbh.values);
 
 //          16
 //    11          13
@@ -332,3 +338,9 @@ console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
 // console.log(bst.DSFPostOrder());
 // console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
 // console.log(bst.DSFInOrder());
+
+// [ 13, 11, 7, 5, 2, 10 ]
+
+//          13
+//    11          10
+//  5     2   7
