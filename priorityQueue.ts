@@ -54,8 +54,15 @@ export class PriorityQueue {
 
       if (leftIdx < length) {
         leftChild = this.elements[leftIdx];
-        if (leftChild.priority < element.priority) swapIdx = leftIdx;
-      } else leftChild = element;
+        if (leftChild.priority < element.priority) {
+          swapIdx = leftIdx;
+        }
+      } else {
+        leftChild = {
+          value: Infinity,
+          priority: Infinity,
+        };
+      }
       if (rightIdx < length) {
         rightChild = this.elements[rightIdx];
         if (
@@ -72,3 +79,13 @@ export class PriorityQueue {
     }
   }
 }
+
+// Expected
+// [
+//     NodeQ { value: 11, priority: 2 },
+//     NodeQ { value: 13, priority: 2 },
+//     NodeQ { value: 10, priority: 3 },
+//     NodeQ { value: 7, priority: 5 },
+//     NodeQ { value: 5, priority: 5 },
+//     NodeQ { value: 2, priority: 5 }
+//   ]

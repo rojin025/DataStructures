@@ -341,11 +341,18 @@ O(n)
 import { PriorityQueue } from "./priorityQueue";
 
 let pq = new PriorityQueue();
-pq.enqueue(10, 5);
+pq.enqueue(10, 3);
 pq.enqueue(5, 5);
-pq.enqueue(13, 3);
-pq.enqueue(11, 3);
+pq.enqueue(13, 2);
+pq.enqueue(11, 2);
 pq.enqueue(2, 5);
 pq.enqueue(16, 1);
 pq.enqueue(7, 5);
+console.log(pq);
+
+console.log(pq.dequeue());
+console.log(pq.dequeue());
+console.log(pq.dequeue());
+console.log(pq.dequeue());
+console.log(pq.dequeue());
 console.log(pq);
