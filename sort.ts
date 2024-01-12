@@ -4,7 +4,6 @@ let arrNum = [3, 2, 1, 5, 4];
 function numCompare(num1: number, num2: number): number {
   return num1 - num2;
 }
-
 // console.log(arrNum.sort(numCompare));
 // console.log(arr2.sort());
 function swapNum(arr: number[], lower: number, greater: number) {
@@ -53,4 +52,26 @@ function selectionSort(arr: number[]): number[] {
   return arr;
 }
 
-console.log(selectionSort(arrNum));
+// console.log(selectionSort(arrNum));
+
+// [3, 2, 1, 5, 4];
+// Not working ?
+function insertionSort(arr: number[]): number[] {
+  for (let i = 1; i < arr.length; i++) {
+    let currentVal = arr[i];
+    let next = 1;
+    for (let j = i - 1; j >= 0 && arr[j] > currentVal; j--) {
+      console.log("Inside J");
+      next = j + 1;
+      arr[next] = arr[j];
+    }
+    console.log("after Loop", arr);
+    console.log("next", next);
+    console.log("currentVal", currentVal);
+    arr[i - 1] = currentVal;
+    console.log(arr);
+  }
+  return arr;
+}
+
+// console.log(insertionSort(arrNum));
