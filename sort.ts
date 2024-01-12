@@ -6,10 +6,10 @@ function numCompare(num1: number, num2: number): number {
 }
 // console.log(arrNum.sort(numCompare));
 // console.log(arr2.sort());
-function swapNum(arr: number[], lower: number, greater: number) {
-  const temp = arr[lower];
-  arr[lower] = arr[greater];
-  arr[greater] = temp;
+function swapNum(arr: number[], left: number, right: number) {
+  const temp = arr[left];
+  arr[left] = arr[right];
+  arr[right] = temp;
 }
 /** BubbleSort */
 function bubbleSort(arr: number[]): number[] {
@@ -111,4 +111,40 @@ function mergeSort(arr: number[]): number[] {
   let right = mergeSort(arr.slice(mid));
   return merge(left, right);
 }
-console.log(mergeSort([3, 2, 1, 4]));
+// console.log(mergeSort([3, 2, 1, 4]));
+
+/** Quick Sort */
+function findPivotIndex(
+  arr: number[],
+  start: number = 0,
+  end: number = arr.length
+): number {
+  let pivotIdx = start,
+    pivot = arr[start];
+
+  for (let i = start + 1; i <= end; i++) {
+    if (pivot > arr[i]) {
+      pivotIdx++;
+      swapNum(arr, pivotIdx, i);
+    }
+  }
+  swapNum(arr, start, pivotIdx);
+  return pivotIdx;
+}
+// console.log(findPivotIndex([2, 1, 3]));
+
+function quickSort(
+  arr: number[],
+  left: number = 0,
+  right: number = arr.length - 1
+) {
+  if (left < right) {
+    let pivotIdx = findPivotIndex(arr, left, right);
+    quickSort(arr, left, pivotIdx - 1);
+    quickSort(arr, pivotIdx + 1, right);
+  }
+  return arr;
+}
+
+// console.log("Array", quickSort([2, 1, 3]));
+console.log("Array", quickSort([10, 2, 1, 3, 11, -1]));
