@@ -147,4 +147,50 @@ function quickSort(
 }
 
 // console.log("Array", quickSort([2, 1, 3]));
-console.log("Array", quickSort([10, 2, 1, 3, 11, -1]));
+// console.log("Array", quickSort([10, 2, 1, 3, 11, -1]));
+
+/** Radix Sort */
+function getDigitAt(num: number, at: number): number {
+  return Math.floor(Math.abs(num) / Math.pow(10, at)) % 10;
+}
+
+// console.log(getDigitAt(1234, 0));
+// console.log(getDigitAt(1234, 1));
+// console.log(getDigitAt(1234, 2));
+// console.log(getDigitAt(1234, 3));
+
+function digitCount(num: number): number {
+  if (num === 0) return 1;
+  return Math.floor(Math.log10(Math.abs(num))) + 1;
+}
+
+// console.log(digitCount(123));
+// console.log(digitCount(12));
+// console.log(digitCount(1));
+// console.log(digitCount(0));
+
+function findMaxDigits(arr: number[]): number {
+  return digitCount(Math.max(...arr));
+}
+
+// console.log(findMaxDigits([1, 22, 333, 4444]));
+
+function radixSort(arr: number[]): number[] {
+  const maxDigit = findMaxDigits(arr);
+  for (let at = 0; at < maxDigit; at++) {
+    let bucketDigit = Array.from({ length: 10 }, () => []);
+    for (let i = 0; i < arr.length; i++) {
+      let digitKey = getDigitAt(arr[i], at);
+
+      /**
+       * arr[i] 
+        Argument of type 'number' is not assignable to parameter of type 'never'.
+      */
+      // if (arr[i]) {
+      //   bucketDigit[digitKey].push(arr[i]);
+      // }
+    }
+    arr = [].concat(...bucketDigit);
+  }
+  return arr;
+}
