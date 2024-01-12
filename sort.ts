@@ -178,19 +178,16 @@ function findMaxDigits(arr: number[]): number {
 function radixSort(arr: number[]): number[] {
   const maxDigit = findMaxDigits(arr);
   for (let at = 0; at < maxDigit; at++) {
-    let bucketDigit = Array.from({ length: 10 }, () => []);
+    let bucketDigit: number[][] = Array.from({ length: 10 }, () => []);
     for (let i = 0; i < arr.length; i++) {
-      let digitKey = getDigitAt(arr[i], at);
-
-      /**
-       * arr[i] 
-        Argument of type 'number' is not assignable to parameter of type 'never'.
-      */
-      // if (arr[i]) {
-      //   bucketDigit[digitKey].push(arr[i]);
-      // }
+      let digitKey: number = getDigitAt(arr[i], at);
+      if (arr[i]) {
+        bucketDigit[digitKey].push(arr[i]);
+      }
     }
-    arr = [].concat(...bucketDigit);
+    arr = ([] as number[]).concat(...bucketDigit);
   }
   return arr;
 }
+
+console.log(radixSort([111, 22, 33, 444]));
