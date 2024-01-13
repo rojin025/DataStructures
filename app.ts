@@ -362,8 +362,15 @@ import { PriorityQueue } from "./priorityQueue";
 import { HashTable } from "./hashTable";
 let hashTable = new HashTable();
 
-hashTable.set("java", "I love Java");
-hashTable.set("javaScript", "JS is awesome");
+hashTable.set("Java", "I love Java");
+hashTable.set("Rust", "What the hell is RUST?");
+hashTable.set("Rust12", "What the hell is RUST?");
+hashTable.set("Figma", "What is New UX UI design tool.");
+hashTable.set("JavaScript", "JS is awesome");
 hashTable.set("TypeScript", "TS is Super Cool");
 
 console.log(hashTable);
+
+console.log(hashTable.get("Figma"));
+console.log(hashTable.get("Rust12"));
+console.log(hashTable.get("Java"));
