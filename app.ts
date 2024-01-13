@@ -340,19 +340,30 @@ O(n)
 
 import { PriorityQueue } from "./priorityQueue";
 
-let pq = new PriorityQueue();
-pq.enqueue(10, 3);
-pq.enqueue(5, 5);
-pq.enqueue(13, 2);
-pq.enqueue(11, 2);
-pq.enqueue(2, 5);
-pq.enqueue(16, 1);
-pq.enqueue(7, 5);
-console.log(pq);
+// let pq = new PriorityQueue();
+// pq.enqueue(10, 3);
+// pq.enqueue(5, 5);
+// pq.enqueue(13, 2);
+// pq.enqueue(11, 2);
+// pq.enqueue(2, 5);
+// pq.enqueue(16, 1);
+// pq.enqueue(7, 5);
+// console.log(pq);
 
-console.log(pq.dequeue());
-console.log(pq.dequeue());
-console.log(pq.dequeue());
-console.log(pq.dequeue());
-console.log(pq.dequeue());
-console.log(pq);
+// console.log(pq.dequeue());
+// console.log(pq.dequeue());
+// console.log(pq.dequeue());
+// console.log(pq.dequeue());
+// console.log(pq.dequeue());
+// console.log(pq);
+
+/** Hash Table  */
+
+import { HashTable } from "./hashTable";
+let hashTable = new HashTable();
+
+hashTable.set("java", "I love Java");
+hashTable.set("javaScript", "JS is awesome");
+hashTable.set("TypeScript", "TS is Super Cool");
+
+console.log(hashTable);
