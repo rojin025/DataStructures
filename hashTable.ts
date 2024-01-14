@@ -3,8 +3,9 @@ interface HashType {
 }
 
 export class HashTable {
-  keyMap: HashType[] | null[];
-  constructor(size: number = 17) {
+  keyMap: HashType[];
+
+  constructor(size: number = 37) {
     this.keyMap = new Array(size);
   }
 
@@ -16,6 +17,15 @@ export class HashTable {
       total = (total * WEIRD_PRIME + value) % this.keyMap.length;
     }
     return total;
+  }
+
+  values() {
+    let values: string[] = [];
+    for (let i = 0; i < this.keyMap.length; i++) {
+      if (this.keyMap[i] && !values.includes(this.keyMap[i].value))
+        values.push(this.keyMap[i].value);
+    }
+    return values;
   }
 
   /** need work -> not happy with -ve index */
