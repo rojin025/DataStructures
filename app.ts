@@ -362,15 +362,15 @@ import { PriorityQueue } from "./priorityQueue";
 import { HashTable } from "./hashTable";
 let hashTable = new HashTable();
 
-hashTable.set("Java", "I love Java");
-hashTable.set("Rust", "What the hell is RUST?");
-hashTable.set("Rust12", "What the hell is RUST?");
-hashTable.set("Rust12", "What the hell is RUST12?");
-hashTable.set("Figma", "What is New UX UI design tool.");
-hashTable.set("JavaScript", "JS is awesome");
-hashTable.set("TypeScript", "TS is Super Cool");
+// hashTable.set("Java", "I love Java");
+// hashTable.set("Rust", "What the hell is RUST?");
+// hashTable.set("Rust12", "What the hell is RUST?");
+// hashTable.set("Rust12", "What the hell is RUST12?");
+// hashTable.set("Figma", "What is New UX UI design tool.");
+// hashTable.set("JavaScript", "JS is awesome");
+// hashTable.set("TypeScript", "TS is Super Cool");
 
-console.log(hashTable);
+// console.log(hashTable);
 
 /** Get Method  */
 
@@ -379,5 +379,19 @@ console.log(hashTable);
 // console.log(hashTable.get("Java"));
 
 /** Values */
-console.log(hashTable.values());
-console.log(hashTable.keys());
+// console.log(hashTable.values());
+// console.log(hashTable.keys());
+
+/** Graph   */
+import { Graph } from "./graph";
+let graph = new Graph();
+
+graph.addVertex("SF");
+graph.addVertex("OAK");
+graph.addVertex("DES");
+console.log(graph);
+
+console.log(graph.addEdge("SF", "OAK"));
+console.log(graph.addEdge("OAK", "SF"));
+graph.addEdge("DES", "SF");
+console.log(graph);
