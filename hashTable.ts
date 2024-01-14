@@ -15,7 +15,6 @@ export class HashTable {
       const value = Math.abs(key.charCodeAt(i) - 96);
       total = (total * WEIRD_PRIME + value) % this.keyMap.length;
     }
-    console.log(total);
     return total;
   }
 
@@ -34,7 +33,8 @@ export class HashTable {
 
   get(key: string) {
     let index = this._hash(key);
-    if (this.keyMap[index]) return this.keyMap[index];
+    if (this.keyMap[index] && this.keyMap[index]?.key === key)
+      return this.keyMap[index]?.value;
     return undefined;
   }
 }
