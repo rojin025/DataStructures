@@ -386,12 +386,43 @@ let hashTable = new HashTable();
 import { Graph } from "./graph";
 let graph = new Graph();
 
-graph.addVertex("SF");
-graph.addVertex("OAK");
-graph.addVertex("DES");
-console.log(graph);
+// graph.addVertex("SF");
+// graph.addVertex("OAK");
+// graph.addVertex("DES");
+// // console.log(graph);
 
-console.log(graph.addEdge("SF", "OAK"));
-console.log(graph.addEdge("OAK", "SF"));
-graph.addEdge("DES", "SF");
+// console.log(graph.addEdge("SF", "OAK"));
+// console.log(graph.addEdge("OAK", "SF"));
+// graph.addEdge("DES", "SF");
+// graph.addEdge("DES", "OAK");
+// console.log(graph);
+
+// // remove
+// // console.log(graph.removeEdge("DES", "SF"));
+// // console.log(graph.removeEdge("SF", "O"));
+// // console.log(graph);
+
+// // removeVertex
+// console.log(graph);
+
+// console.log(graph.removeVertex("PKR"));
+// console.log(graph.removeVertex("SF"));
+// console.log(graph);
+
+graph.addVertex("A");
+graph.addVertex("B");
+graph.addVertex("C");
+graph.addVertex("D");
+graph.addVertex("E");
+graph.addVertex("F");
+
+graph.addEdge("A", "B");
+graph.addEdge("A", "C");
+graph.addEdge("B", "D");
+graph.addEdge("C", "E");
+graph.addEdge("D", "E");
+graph.addEdge("D", "F");
+graph.addEdge("E", "F");
+
 console.log(graph);
+console.log(graph.DFT_Recursive("A"));
