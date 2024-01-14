@@ -28,7 +28,17 @@ export class HashTable {
     return values;
   }
 
-  /** need work -> not happy with -ve index */
+  keys() {
+    let keys: string[] = [];
+    for (let i = 0; i < this.keyMap.length; i++) {
+      if (this.keyMap[i]) keys.push(this.keyMap[i].key);
+    }
+    return keys;
+  }
+
+  /**
+   *  need work -> not happy with Data Structure
+   */
   set(key: string, value: string) {
     let index: number = this._hash(key);
     if (this.keyMap[index]) {

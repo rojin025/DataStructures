@@ -380,3 +380,4 @@ console.log(hashTable);
 
 /** Values */
 console.log(hashTable.values());
+console.log(hashTable.keys());
