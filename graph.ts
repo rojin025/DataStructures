@@ -58,6 +58,7 @@ export class Graph {
     let result: string[] = [];
     let vistedVertices: { [vertex: string]: boolean } = {};
     const adjacencyList: { [vertex: string]: string[] } = this.adjacencyList;
+
     (function dftr(vertex: string) {
       if (!vertex) return null;
       vistedVertices[vertex] = true;
@@ -69,6 +70,51 @@ export class Graph {
       }
     })(rootVertex);
 
+    return result;
+  }
+  DFT_Stack(startVertex: string) {
+    const stack: string[] = [startVertex];
+    const result: string[] = [];
+    const visitedVertex: { [vertex: string]: boolean } = {};
+    let currentVertex: string;
+
+    visitedVertex[startVertex] = true;
+    while (stack.length) {
+      console.log(stack);
+      currentVertex = stack.pop() as string;
+      result.push(currentVertex);
+
+      this.adjacencyList[currentVertex].forEach((neighbor) => {
+        if (!visitedVertex[neighbor]) {
+          visitedVertex[neighbor] = true;
+          stack.push(neighbor);
+        }
+      });
+    }
+    return result;
+  }
+
+  BFT(startVertex: string) {
+    const queue: string[] = [startVertex];
+    const result: string[] = [];
+    const visitedVertex: { [vertex: string]: boolean } = {};
+    let currentVertex: string;
+
+    visitedVertex[startVertex] = true;
+    while (queue.length) {
+      currentVertex = queue.shift() as string;
+      result.push(currentVertex);
+
+      this.adjacencyList[currentVertex]
+        .slice() /** to reverse order of traversal slice and reverse */
+        .reverse()
+        .forEach((neighbor) => {
+          if (!visitedVertex[neighbor]) {
+            visitedVertex[neighbor] = true;
+            queue.push(neighbor);
+          }
+        });
+    }
     return result;
   }
 }

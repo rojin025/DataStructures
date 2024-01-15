@@ -425,4 +425,7 @@ graph.addEdge("D", "F");
 graph.addEdge("E", "F");
 
 console.log(graph);
-console.log(graph.DFT_Recursive("A"));
+// console.log(graph.DFT_Recursive("A"));
+// console.log(graph.DFT_Stack("A"));
+
+console.log(graph.BFT("A"));
