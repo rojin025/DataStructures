@@ -50,3 +50,17 @@ console.log(addUp([3, 3], 6));
 //  [ 0, 1 ]
 // [ 1, 2 ]
 // [ 0, 1 ]
+
+//6. Write a Pseudo code to
+// return the count of even numbers in the given array
+// and analyse the Big O runtime for this
+// algorithm.
+
+// O(n)
+export function countEvenNumIn(arr: number[]): number {
+  let result: number = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] % 2 === 0) result++;
+  }
+  return result;
+}

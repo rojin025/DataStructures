@@ -1,5 +1,6 @@
 /**
  * [ 2, 5, 6, 2, 4, 3, 1, 3] -> [ 2, 5, 6, 4, 3, 1 ]
+ * O(n^2)
  */
 export function removeDuplicate(array: number[]): number[] {
   let result: number[] = [];
@@ -9,7 +10,11 @@ export function removeDuplicate(array: number[]): number[] {
   return result;
 }
 
-export function remDup<T>(arr: T[]): T[] {
+/**
+ *  Updated Code
+ *  O(n)
+ */
+export function remDupe<T>(arr: T[]): T[] {
   let resultSet = new Set<T>();
   let result: T[] = [];
   for (const num of arr) {
@@ -21,6 +26,12 @@ export function remDup<T>(arr: T[]): T[] {
 
   return result;
 }
+
+// // Remove Duplicate
+// console.log(removeDuplicate([2, 5, 6, 2, 4, 3, 1, 3]));
+// console.log(remDupe([2, 5, 6, 2, 4, 3, 1, 3]));
+// console.log(removeDuplicate([1, 2, 2, 2, 3, 4, 3, 5]));
+// console.log(remDupe([1, 2, 2, 2, 3, 4, 3, 5]));
 
 /**
  * 2.
