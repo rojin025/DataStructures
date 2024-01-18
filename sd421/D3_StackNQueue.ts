@@ -1,3 +1,4 @@
+// Problem 1
 // Abstract Class: Stack
 //     Properties:
 //         - items: a list to store stack elements
@@ -25,3 +26,43 @@
 //             Pop the top element from the stack
 //             If the popped element does not match the corresponding opening parenthesis, return False
 //     After processing all characters, if the stack is empty, return True; otherwise, return False
+
+// Problem 2
+//Abstract Class: Node
+// Properties:
+// - data: the data stored in the node
+// - next: reference to the next node
+// - prev: reference to the previous node
+
+// Abstract Class: Queue
+// Properties:
+// - front: reference to the front node
+// - rear: reference to the rear node
+
+// Method: enqueue(data)
+// Create a new node with the given data
+// If rear is None (empty queue):
+//     Set front and rear to the new node
+// Else:
+//     Set new node's next to rear
+//     Set rear's prev to the new node
+//     Set rear to the new node
+
+// Method: dequeue()
+// If front is None (empty queue):
+//     Return None
+// Get the data from the front node
+// If front is the same as rear (single element):
+//     Set front and rear to None
+// Else:
+//     Set front to front's prev
+//     Set front's next to None
+// Return the data
+
+// Method: isEmpty()
+// Return true if front is None, else false
+
+// Method: front()
+// Return None if front is None, else return front's data
+
+// Method: peek()  Same as front()
