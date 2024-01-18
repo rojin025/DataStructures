@@ -430,20 +430,35 @@ graph.addEdge("E", "F");
 
 // console.log(graph.BFT("A"));
 
+// Big 0
+import { countEvenNumIn } from "./sd421/d1_BigO";
+// console.log("Total Even: ", countEvenNumIn([1, 2, 3, 4]));
+// console.log("Total Even: ", countEvenNumIn([1, 2, 6, 3, 4]));
+// console.log("Total Even: ", countEvenNumIn([]));
+
 // Is permutaion
 import {
-  remDup,
+  remDupe,
   removeDuplicate,
   isPermutation,
 } from "./sd421/D2_Sequence_ADT";
 
-// Remove Duplicate
-console.log(removeDuplicate([2, 5, 6, 2, 4, 3, 1, 3]));
-console.log(remDup([2, 5, 6, 2, 4, 3, 1, 3]));
-console.log(removeDuplicate([1, 2, 2, 2, 3, 4, 3, 5]));
-console.log(remDup([1, 2, 2, 2, 3, 4, 3, 5]));
+// // Remove Duplicate
+// console.log(removeDuplicate([2, 5, 6, 2, 4, 3, 1, 3]));
+// console.log(remDupe([2, 5, 6, 2, 4, 3, 1, 3]));
+// console.log(removeDuplicate([1, 2, 2, 2, 3, 4, 3, 5]));
+// console.log(remDupe([1, 2, 2, 2, 3, 4, 3, 5]));
 
 // console.log("Is permutation");
 // console.log(isPermutation("ABC", "CBA")); // True
 // console.log(isPermutation("ABC", "BCA")); // False
 // console.log(isPermutation("AB", "CBA")); // False
+
+// console.log(remDupe(["a", "a", "z"]));
+
+// Recursion
+
+import { recursion } from "./sd421/D4_Recursion";
+
+console.log("Recursion ");
+console.log(recursion());
