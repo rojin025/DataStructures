@@ -66,3 +66,50 @@
 // Return None if front is None, else return front's data
 
 // Method: peek()  Same as front()
+
+// Problem 3
+
+// Abstract Class: Stack
+//     Properties:
+//         - items: a list to store stack elements
+
+//     Method: push(item)
+//         Add the item to the top of the stack
+
+//     Method: pop()
+//         Remove and return the item from the top of the stack
+//         If the stack is empty, return None
+
+//     Method: isEmpty()
+//         Return true if the stack is empty, else false
+
+// Class: QueueUsingTwoStacks
+//     Properties:
+//         - stack1: the first stack for enqueue operations
+//         - stack2: the second stack for dequeue operations
+
+//     Method: enqueue(data)
+//         Push the data onto stack1
+
+//     Method: dequeue()
+//         If stack2 is empty:
+//             While stack1 is not empty:
+//                 Pop from stack1 and push onto stack2
+//         Pop from stack2 and return the popped item
+//         If both stacks are empty, return None
+
+//     Method: isEmpty()
+//         Return true if both stack1 and stack2 are empty, else false
+
+//     Method: front()
+//         If stack2 is not empty:
+//             Return the top element of stack2
+//         If stack2 is empty but stack1 is not empty:
+//             While stack1 is not empty:
+//                 Pop from stack1 and push onto stack2
+//             Return the top element of stack2
+//         If both stacks are empty, return None
+
+// Function: runningTimeAnalysis()
+//     Enqueue operation time complexity: O(1)
+//     Dequeue operation time complexity: O(1) amortized
