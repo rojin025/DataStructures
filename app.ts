@@ -458,10 +458,23 @@ import {
 
 // Recursion
 
-import { fibonacci, fibonacciIteration, recursion } from "./sd421/D4_Recursion";
+import {
+  fibonacci,
+  fibonacciIteration,
+  recursion,
+  isEven,
+  power,
+} from "./sd421/D4_Recursion";
 
 console.log("Recursion ");
 // console.log(recursion());
 // console.log(factorial(5));
-console.log(fibonacci(8));
-console.log(fibonacciIteration(8));
+// console.log(fibonacci(8));
+// console.log(fibonacciIteration(8));
+
+// console.log(isEven(4));
+// console.log(isEven(5));
+// console.log(isEven(-5));
+
+console.log(power(2, 2));
+console.log(power(2, 3));
