@@ -27,6 +27,36 @@
 //             If the popped element does not match the corresponding opening parenthesis, return False
 //     After processing all characters, if the stack is empty, return True; otherwise, return False
 
+// Mam Ans
+/*
+class Queue {
+  constructor() {
+    this._list = new DLinkedList();
+  }
+  enqueue(elem) {
+    this._list.insertLast(elem);
+  }
+  dequeue() {
+    if (this._list.isEmpty()) {
+      throw new Error("Queue is empty");
+    }
+    return this._list.remove(this._list.first());
+  }
+  isEmpty() {
+    return this._list.isEmpty();
+  }
+  front() {
+    if (this._list.isEmpty()) {
+      throw new Error("Queue is empty");
+    }
+    return this._list.first().element();
+  }
+  size() {
+    return this._list.size();
+  }
+}
+// */
+
 // Problem 2
 //Abstract Class: Node
 // Properties:
