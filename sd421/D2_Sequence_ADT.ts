@@ -55,3 +55,22 @@ export function isPermutation(str1: string, str2: string): boolean {
 // console.log(isPermutation("ABC", "CBA")); // True
 // console.log(isPermutation("ABC", "BCA")); // False
 // console.log(isPermutation("AB", "CBA")); // False
+
+/*
+Problem: Write an algorithm to get the sum of elements in the Doubly Linked list
+
+Algorithm sum(L)
+  
+  Input: Doubly Linked List
+  Output: Sum of all the elements in the given list
+    
+    if L.isEmpty() then return 0
+    p := L.first() // Get the first node
+    sum := p.element() // get the value present in the first node 
+
+    while ! L.isLast(p) do // loop through until reach the last node
+        p := L.after(p) // Move the next node after p
+        sum := sum + p.element() // get the value present in the p node 
+
+  return sum // after the loop, return the computed sum
+*/
