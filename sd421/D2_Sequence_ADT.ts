@@ -59,18 +59,28 @@ export function isPermutation(str1: string, str2: string): boolean {
 /*
 Problem: Write an algorithm to get the sum of elements in the Doubly Linked list
 
-Algorithm sum(L)
+O(n)
+Algorithm sum(List)
   
   Input: Doubly Linked List
   Output: Sum of all the elements in the given list
     
-    if L.isEmpty() then return 0
-    p := L.first() // Get the first node
-    sum := p.element() // get the value present in the first node 
+    if List.isEmpty() then return 0
+    position := List.first() // Get the first node
+    sum := position.element() // get the value present in the first node 
 
-    while ! L.isLast(p) do // loop through until reach the last node
-        p := L.after(p) // Move the next node after p
-        sum := sum + p.element() // get the value present in the p node 
+    while ! List.isLast(position) do // looposition through until reach the last node
+        position := List.after(position) // Move the next node after position
+        sum := sum + position.element() // get the value positionresent in the position node 
 
   return sum // after the loop, return the computed sum
+*/
+
+/*
+Use Iterators to print the List elements
+
+objectIterator It = L.elements();
+While(it.hasNext())
+  console.log(p.element())
+  P = it.nextObject(); 
 */
