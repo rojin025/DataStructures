@@ -33,3 +33,19 @@ Algorithm swapElements(p, q)
     q.element <- temp
     
 */
+
+/*
+Algorithm indexOfMin(A, r, size)
+    Input arrayA, an index r (referencing an item of A), and size of the
+        heap stored in A
+    Output the rank of element in A containing the smallest value
+
+    smallest <- r
+        left <- 2*r
+        right <- 2*r + 1
+    if left < size Ù key(A[left]) < key(A[smallest]) then
+        smallest <- left
+    if right < size Ù key(A[right]) < key(A[smallest]) then
+        smallest <- right 
+    return smallest
+*/
