@@ -478,3 +478,11 @@ console.log("Recursion ");
 
 console.log(power(2, 2));
 console.log(power(2, 3));
+
+import { addUp } from "./sd421/d1_BigO";
+console.log("InterView Question");
+
+console.log("Assigment 1 Interview Question");
+console.log(addUp([2, 7, 11, 15], 9));
+console.log(addUp([3, 2, 4], 6));
+console.log(addUp([3, 3], 6));
