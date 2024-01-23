@@ -79,8 +79,21 @@ Algorithm sum(List)
 /*
 Use Iterators to print the List elements
 
-objectIterator It = L.elements();
+objectIterator It = List.elements();
 While(it.hasNext())
-  console.log(p.element())
-  P = it.nextObject(); 
+  console.log(position.element())
+  position = it.nextObject(); 
+*/
+
+/*
+// Summation using Iterator
+
+sum = 0;
+objectIterator it = List.elements(); 
+
+While(it.hasNext()) // More elements
+  sum = sum + position.element();
+  position= it.nextObject(); 
+      // Move to Node pointer , you got the first node. If the loop continue it 
+      //will automatically move the next node, until loop fails
 */
