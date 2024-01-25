@@ -16,19 +16,21 @@ export function factorial(num: number): number {
   return num * factorial(--num);
 }
 
+// Tail Recursion
+export function sumFirst(num: number) {
+  return sumFirstHelper(num, 0);
+}
+
+function sumFirstHelper(num: number, sum: number) {
+  if (num === 0) return sum;
+  return sumFirstHelper(num - 1, num + sum);
+}
+
 // Multi
 export function fibonacci(num: number): number {
   if (num < 0) return 0;
   if (num <= 1) return num;
   return fibonacci(num - 2) + fibonacci(num - 1);
-}
-
-export function fibonacciIteration(num: number): number {
-  let arr = [0, 1];
-  for (let i = 2; i < num + 1; i++) {
-    arr.push(arr[i - 2] + arr[i - 1]);
-  }
-  return arr[num];
 }
 
 export function isEven(num: number): boolean {
@@ -45,24 +47,6 @@ export function power(x: number, k: number): number {
     return x * power(x, k - 1);
   }
 }
-
-/*
-
-Function calculateSum(L : node):
-    // Base case  node is null
-    if node is None/ Null:
-        return  0
-    else:
-        return sumHelper(L , 0)
-        
-        
-Function sumHelper(L : node, sum: number):
-      // Base case  node is null
-      if node is None:
-        return  0
-      else
-        return sumHelper(L.after() , sum + L.data)
-*/
 
 // FindMax
 
