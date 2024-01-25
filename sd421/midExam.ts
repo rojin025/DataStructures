@@ -16,6 +16,12 @@ export function factorial(num: number): number {
   return num * factorial(--num);
 }
 
+export function isEven(num: number): boolean {
+  if (num === 0) return false;
+  else if (num === 1) return false;
+  else return isEven(num - 2);
+}
+
 // Tail Recursion
 export function sumFirst(num: number) {
   return sumFirstHelper(num, 0);
@@ -33,11 +39,15 @@ export function fibonacci(num: number): number {
   return fibonacci(num - 2) + fibonacci(num - 1);
 }
 
-export function isEven(num: number): boolean {
-  if (num < 0) return false;
-  else if (num === 0) return true;
-  else if (num === 1) return false;
-  else return isEven(num - 2);
+// Mutual Recursion
+export function isEvenMutual(num: number): boolean {
+  if (num === 0) return true;
+  return isOdd(--num);
+}
+
+export function isOdd(num: number): boolean {
+  if (num === 0) return false;
+  return isEvenMutual(--num);
 }
 
 export function power(x: number, k: number): number {
@@ -45,6 +55,23 @@ export function power(x: number, k: number): number {
   else if (k === 1) return x;
   else {
     return x * power(x, k - 1);
+  }
+}
+
+export function sum(n: number): number {
+  return sumHelper(1, n);
+}
+
+function sumHelper(start: number, end: number): number {
+  if (start > end) {
+    return 0;
+  } else {
+    const mid = Math.floor((start + end) / 2);
+    const leftSum = sumHelper(start, mid - 1);
+    const rightSum = sumHelper(mid + 1, end);
+    console.log("L: ", leftSum);
+    console.log("R: ", rightSum);
+    return leftSum + rightSum + mid;
   }
 }
 
