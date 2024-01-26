@@ -112,3 +112,34 @@ export function powerLog(x: number, n: number): number {
     return false.
   }
 */
+
+function isBalanced(str: string): boolean {
+  const stack: string[] = [];
+  let balanced: boolean = true;
+  const opening: string[] = ["(", "[", "{"];
+  const closing: string[] = [")", "]", "}"];
+  const pairs: { [key: string]: string } = { "(": ")", "[": "]", "{": "}" };
+
+  let index: number = 0;
+  let currentChar: string;
+
+  while (balanced && index < str.length) {
+    currentChar = str[index];
+    if (opening.includes(currentChar)) {
+      stack.push(currentChar);
+    } else if (
+      closing.includes(currentChar) &&
+      // (stack.length === 0 || pairs[stack.pop()] !== currentChar)
+    ) {
+      balanced = false;
+    }
+    index++;
+  }
+
+  return balanced && stack.length === 0;
+}
+
+// Example usage:
+const result1 = isBalanced("((a + b) * (c - d))"); // true
+const result2 = isBalanced("{[a + b] * (c - d)}"); // true
+const result3 = isBalanced("{[a + b) * (c - d]}"); // false
