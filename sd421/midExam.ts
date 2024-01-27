@@ -176,3 +176,15 @@ function inorderRecursive(tree) {
 //     rightHeight = heightHelper(node, node.rightChild(position));
 //     return Math.max(leftHeight , rightHeight) + 1;
 // }
+
+// BST Sum of all
+function sumTree(Node){
+  return sumHelper(Node, Node.root());
+}
+
+function sumHelper(Node, position ){
+  if(Node.isExternal(position)) return 0;
+  lsum = sumHelper(Node, Node.leftChild(position));
+  rsum = sumHelper(Node, Node.rightChild(position));
+  return lsum + rsum+ position.element();
+}
