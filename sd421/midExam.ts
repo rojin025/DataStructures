@@ -150,3 +150,29 @@ const result3 = isBalanced("{[a + b) * (c - d]}"); // false
 // 	print(node.element()); 
 // 	preOrder(node.leftChild()); 
 // 	preOrder(node.rightChild());
+function inorderRecursive(tree) {
+  const result = [];
+  
+  function inorderTraverse(node) {
+    if (!node) return;
+        
+    inorderTraverse(node.left);
+    // result.push(node.val);
+    inorderTraverse(node.right);
+  }
+  
+  inorderTraverse(tree);
+  
+  return result;
+}
+
+// // // BST Finding Height
+// function height(node)
+//   return heightHelper(node, node.root());
+
+// function heightHelper(node, position)  {
+//     if (node.isExternal(position)) return 0;
+//     leftHeight = heightHelper(node, node.leftChild(position));
+//     rightHeight = heightHelper(node, node.rightChild(position));
+//     return Math.max(leftHeight , rightHeight) + 1;
+// }
