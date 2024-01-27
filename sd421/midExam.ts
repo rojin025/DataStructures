@@ -143,3 +143,10 @@ function isBalanced(str: string): boolean {
 const result1 = isBalanced("((a + b) * (c - d))"); // true
 const result2 = isBalanced("{[a + b] * (c - d)}"); // true
 const result3 = isBalanced("{[a + b) * (c - d]}"); // false
+
+// Bst
+// Algorithm preOrder(node) 
+// 	if ((node == null)) return;
+// 	print(node.element()); 
+// 	preOrder(node.leftChild()); 
+// 	preOrder(node.rightChild());
