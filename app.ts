@@ -466,7 +466,7 @@ import {
   power,
 } from "./sd421/D4_Recursion";
 
-console.log("Recursion ");
+// console.log("Recursion ");
 // console.log(recursion());
 // console.log(factorial(5));
 // console.log(fibonacci(8));
@@ -476,13 +476,19 @@ console.log("Recursion ");
 // console.log(isEven(5));
 // console.log(isEven(-5));
 
-console.log(power(2, 2));
-console.log(power(2, 3));
+// console.log(power(2, 2));
+// console.log(power(2, 3));
 
-import { addUp } from "./sd421/d1_BigO";
-console.log("InterView Question");
+// Exam
+import { isEvenMutual, sum, sumFirst } from "./sd421/midExam";
 
-console.log("Assigment 1 Interview Question");
-console.log(addUp([2, 7, 11, 15], 9));
-console.log(addUp([3, 2, 4], 6));
-console.log(addUp([3, 3], 6));
+console.log("Exam");
+// console.log(sumFirst(3));
+// console.log(sumFirst(4));
+
+// console.log("4 is", isEvenMutual(4));
+// console.log("5 is", isEvenMutual(5));
+
+console.log("Sum helper 5 ", sum(3));
+
+// Phase 2
