@@ -182,9 +182,9 @@ function sumTree(Node){
   return sumHelper(Node, Node.root());
 }
 
-function sumHelper(Node, position ){
-  if(Node.isExternal(position)) return 0;
-  lsum = sumHelper(Node, Node.leftChild(position));
-  rsum = sumHelper(Node, Node.rightChild(position));
-  return lsum + rsum+ position.element();
-}
+// function sumHelper(Node, position ){
+//   if(Node.isExternal(position)) return 0;
+//   lsum = sumHelper(Node, Node.leftChild(position));
+//   rsum = sumHelper(Node, Node.rightChild(position));
+//   return lsum + rsum+ position.element();
+// }
