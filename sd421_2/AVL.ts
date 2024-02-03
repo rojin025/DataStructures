@@ -18,7 +18,7 @@ Algorithm rotateLeft(Tree, Node)
     Input Binary Tree : Tree and Node
     Output a left rotation around Node is performed
 
-    if Tree.isRoot(Node) throw InvalidLeftRotation
+    if Tree.isRoot(Node) throw InvalidLeftRotation 
     parent = Tree.parent(Node);
     grandParent = Tree.parent(parent);
 
