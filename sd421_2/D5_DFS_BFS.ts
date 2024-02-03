@@ -17,3 +17,16 @@ Output :G, with all vertices marked as visited
             stack.push( unvisitedVertex )
         else 
             stack.pop()
+
+// BFS
+
+Algorithm: Breadth First Search
+Input: A simple connected undirected graph G = (V, E)
+Output: G, with all vertices marked as visited
+
+    Initialize A Queue = queue
+    pick a starting vertex s and mark S as visited 
+    queue.enqueue(S)
+    while (!queue.isEmpty())
+        vertex = queue.dequeue()
+        forEach unvisited z
