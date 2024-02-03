@@ -29,4 +29,8 @@ Output: G, with all vertices marked as visited
     queue.enqueue(S)
     while (!queue.isEmpty())
         vertex = queue.dequeue()
-        forEach unvisited z
+        forEach unvisited vertex W adjacent to vertex 
+            mark W
+            queue.enqueue(W)
+
+            
