@@ -27,3 +27,24 @@ while w < W do
     remove item i with highest vi
     xi = min{wi ,W-w}
     w  = w + min{wi ,W-w}
+
+// Dijkstra’s Algorithm
+
+Algorithm DijkstraDistances(G, s) 
+    PQ = new priority queue
+    for all v Î G.vertices() do
+        if (v = s )
+            setDistance(v, 0)
+        else
+            setDistance(v, ∞ ) 
+            PQ.insertItem(getDistance(v), v)
+
+    while ! PQ.isEmpty() do
+        u = PQ.removeMin()
+        for all e sumation G.incidentEdges(u) do
+            { relax edge e }
+            z = G.opposite(u,e)
+            d = getDistance(u) + weight(e) 
+            if d < getDistance(z) then
+                setDistance(z,d)
+                PQ.replaceKey(z,d) {new method} 
