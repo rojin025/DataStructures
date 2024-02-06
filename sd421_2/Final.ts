@@ -1,45 +1,56 @@
 // Algorithm findValue(k)
 // Pass key and get value item
-// findItem(k)
-function findValue(k) {
-  return findItem(k).value();
+
+function findValue(key) {
+  return findItem(key).value();
 }
 
-// Algorithm findItem(k)
-// function findItem(k) {
-//   let i = hash(k); // Hashed index
-//   let p = 0;
+// Algorithm findItem(key)
+function findItem(key) {
+  let i = hash(key); // Hashed index
+  let p = 0;
 
-//   while (p < N) {
-//     // N – Table size
-//     let x = (i + p) % N;
-//     let item = A[x]; // Retrieve from the x index
+  while (p < N) {
+    // N – Table size
+    let hashKey = (i + p) % N;
+    let item = array[hashKey]; // Retrieve from the hashKey index
 
-//     if (item === null) {
-//       return "NO_SUCH_KEY";
-//     } else if (item.key() === k) {
-//       return item;
-//     } else {
-//       p = p + 1; // Linear probing to find next index
-//     }
-//   }
+    if (item === null) {
+      return "NO_SUCH_KEY";
+    } else if (item.key() === key) {
+      return item;
+    } else {
+      p = p + 1; // Linear probing to find next index
+    }
+  }
 
-//   return "NO_SUCH_KEY";
-// }
+  return "NO_SUCH_KEY";
+}
 
-// removeValue(k) {
-//     const item = findItem(k);
-//     if (item == "NO_SUCH_KEY")
-// 		return "NO_SUCH_KEY";
+removeValue(key) {
+    index = hash(key);
+    p = 0;
 
-// 	const index = h(k);
-// 	table[index] = AVAILABLE;
-//     return item.value();
-//   }
+    while (p<N){
+        hashKey = (index + p) % N;
+
+        if (array[hashKey] == null || array[hashKey] == "AVAILABLE")
+            return "NO_SUCH_KEY";
+
+        if (array[hashKey].key() === key){
+            removedValue = array[hashKey];
+            array[hashKey] = "AVAILABLE";
+            return removedValue;
+        }
+        p+=1;
+    }
+
+    return "NO_SUCH_KEY";
+  }
 
 function insertItem(item) {
-  let k = item.key();
-  let i = hash(k); // Hashed index
+  let key = item.key();
+  let i = hash(key); // Hashed index
   let p = 0;
 
   while (p < N) {
