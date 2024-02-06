@@ -27,41 +27,40 @@ function findItem(key) {
   return "NO_SUCH_KEY";
 }
 
-removeValue(key) {
-    index = hash(key);
-    p = 0;
-
-    while (p<N){
-        hashKey = (index + p) % N;
-
-        if (array[hashKey] == null || array[hashKey] == "AVAILABLE")
-            return "NO_SUCH_KEY";
-
-        if (array[hashKey].key() === key){
-            removedValue = array[hashKey];
-            array[hashKey] = "AVAILABLE";
-            return removedValue;
-        }
-        p+=1;
-    }
-
-    return "NO_SUCH_KEY";
-  }
-
-function insertItem(item) {
-  let key = item.key();
-  let i = hash(key); // Hashed index
+function removeValue(key) {
+  let index = hash(key);
   let p = 0;
 
   while (p < N) {
-    let x = (i + p) % N;
-    if (A[x] === null || A[x] === "AVAILABLE") {
-      A[x] = item;
+    hashKey = (index + p) % N;
+
+    if (array[hashKey] == null || array[hashKey] == "AVAILABLE")
+      return "NO_SUCH_KEY";
+
+    if (array[hashKey].key() === key) {
+      removedValue = array[hashKey];
+      array[hashKey] = "AVAILABLE";
+      return removedValue;
+    }
+    p += 1;
+  }
+
+  return "NO_SUCH_KEY";
+}
+
+function insertItem(item) {
+  let key = item.key();
+  let index = hash(key); // Hashed index
+  let p = 0;
+
+  while (p < N) {
+    let hashKey = (index + p) % N;
+    if (array[hashKey] === null || array[hashKey] === "AVAILABLE") {
+      array[hashKey] = item;
       return "INSERT_SUCCESS";
     } else {
       p = p + 1; // Linear probing to find next index
     }
   }
-
   return "TABLE_FULL";
 }
