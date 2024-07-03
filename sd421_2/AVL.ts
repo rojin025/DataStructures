@@ -36,4 +36,4 @@ Algorithm rotateLeft(Tree, Node)
             Tree.setRightChild(grandParent, Node)        
         else
             Tree.setLeftChild(grandParent, Node)    
-        Tree.setParent(Node, GrandParent)
+        Tree.setParent(Node, GrandParent) */
