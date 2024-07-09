@@ -1,8 +1,10 @@
-import { ClientRequest } from "http";
+type myData = {
+  [index: number]: string;
+};
 
 class MyArray {
   length: number;
-  data;
+  data: myData;
 
   constructor() {
     this.length = 0;
@@ -13,7 +15,7 @@ class MyArray {
     return this.data[index];
   }
 
-  push(item: number) {
+  push(item: string) {
     this.data[this.length] = item;
     this.length++;
     return this.length;
@@ -25,6 +27,8 @@ class MyArray {
     this.length--;
     return lastItem;
   }
+
+  delete(index: number) {}
 }
 
 const newArray = new MyArray();
