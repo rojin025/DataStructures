@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon Arrays/sort2Arrays.ts"
+    "start": "nodemon Arrays/moveZeroes"
   },
-  "author": "",
+  "author": "Rojin",
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^20.14.10",
