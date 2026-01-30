@@ -2,14 +2,26 @@
  * Double Linked List — push, pop, shift, unshift, get.
  */
 class NodeDLL {
-  constructor(val) { this.val = val; this.next = null; this.prev = null; }
+  constructor(val) {
+    this.val = val;
+    this.next = null;
+    this.prev = null;
+  }
 }
 class DoubleLinkedList {
-  constructor() { this.head = null; this.tail = null; this.length = 0; }
+  constructor() {
+    this.head = null;
+    this.tail = null;
+    this.length = 0;
+  }
   push(val) {
     const n = new NodeDLL(val);
     if (!this.head) this.head = this.tail = n;
-    else { this.tail.next = n; n.prev = this.tail; this.tail = n; }
+    else {
+      this.tail.next = n;
+      n.prev = this.tail;
+      this.tail = n;
+    }
     this.length++;
     return this;
   }
@@ -17,7 +29,10 @@ class DoubleLinkedList {
     if (!this.head) return undefined;
     const v = this.tail.val;
     if (this.length === 1) this.head = this.tail = null;
-    else { this.tail = this.tail.prev; this.tail.next = null; }
+    else {
+      this.tail = this.tail.prev;
+      this.tail.next = null;
+    }
     this.length--;
     return v;
   }
@@ -25,14 +40,21 @@ class DoubleLinkedList {
     if (!this.head) return undefined;
     const v = this.head.val;
     if (this.length === 1) this.head = this.tail = null;
-    else { this.head = this.head.next; this.head.prev = null; }
+    else {
+      this.head = this.head.next;
+      this.head.prev = null;
+    }
     this.length--;
     return v;
   }
   unshift(val) {
     const n = new NodeDLL(val);
     if (!this.head) this.head = this.tail = n;
-    else { n.next = this.head; this.head.prev = n; this.head = n; }
+    else {
+      n.next = this.head;
+      this.head.prev = n;
+      this.head = n;
+    }
     this.length++;
     return this;
   }
