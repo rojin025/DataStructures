@@ -7,9 +7,13 @@ function countEvenNumIn(arr) {
   return count;
 }
 // O(1) — constant
-function first(arr) { return arr[0]; }
+function first(arr) {
+  return arr[0];
+}
 // O(n) — linear
-function sum(arr) { return arr.reduce((a, b) => a + b, 0); }
+function sum(arr) {
+  return arr.reduce((a, b) => a + b, 0);
+}
 // O(n²) — nested loops
 function pairs(arr) {
   const out = [];

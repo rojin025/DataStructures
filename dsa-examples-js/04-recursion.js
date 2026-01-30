@@ -15,6 +15,7 @@ function collectOdd(arr) {
   return (arr[0] % 2 ? [arr[0]] : []).concat(collectOdd(arr.slice(1)));
 }
 
-console.log("countDown(3):"); countDown(3);
+console.log("countDown(3):");
+countDown(3);
 console.log("factorial(5):", factorial(5));
 console.log("collectOdd([1,2,3,4,5]):", collectOdd([1, 2, 3, 4, 5]));

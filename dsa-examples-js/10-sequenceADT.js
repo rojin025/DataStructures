@@ -3,7 +3,7 @@
  */
 function removeDuplicate(arr) {
   const seen = new Set();
-  return arr.filter(x => {
+  return arr.filter((x) => {
     if (seen.has(x)) return false;
     seen.add(x);
     return true;
@@ -21,5 +21,5 @@ function isPermutation(a, b) {
 }
 
 console.log(removeDuplicate([2, 5, 6, 2, 4, 3, 1, 3]));
-console.log(isPermutation("ABC", "CBA"));  // true
-console.log(isPermutation("AB", "CBA"));   // false
+console.log(isPermutation("ABC", "CBA")); // true
+console.log(isPermutation("AB", "CBA")); // false

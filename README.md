@@ -1,29 +1,57 @@
 # DataStructures
 
-I am practicing Data Structures and Algorithms.
+Practicing Data Structures and Algorithms — runnable examples and quick-reference cheatsheets.
 
-## Table of Contents — JS Data Structures & Algorithms
+---
 
-Short, runnable JavaScript examples in **[JS/](JS/)** (see [JS/README.md](JS/README.md) for details):
+## DSA Cheatsheet (JS)
 
-| #   | Topic                                          | File                                                  |
-| --- | ---------------------------------------------- | ----------------------------------------------------- |
-| 01  | Same digit frequency                           | [01-sameFrequency.js](JS/01-sameFrequency.js)         |
-| 02  | Recursion (countdown, factorial, collect odds) | [02-recursion.js](JS/02-recursion.js)                 |
-| 03  | Classes (instance + static)                    | [03-classes.js](JS/03-classes.js)                     |
-| 04  | Single Linked List                             | [04-singleLinkedList.js](JS/04-singleLinkedList.js)   |
-| 05  | Double Linked List                             | [05-doubleLinkedList.js](JS/05-doubleLinkedList.js)   |
-| 06  | Stack (LIFO)                                   | [06-stack.js](JS/06-stack.js)                         |
-| 07  | Queue (FIFO)                                   | [07-queue.js](JS/07-queue.js)                         |
-| 08  | Binary Search Tree                             | [08-binarySearchTree.js](JS/08-binarySearchTree.js)   |
-| 09  | Max Binary Heap                                | [09-maxBinaryHeap.js](JS/09-maxBinaryHeap.js)         |
-| 10  | Priority Queue (min-heap)                      | [10-priorityQueue.js](JS/10-priorityQueue.js)         |
-| 11  | Hash Table                                     | [11-hashTable.js](JS/11-hashTable.js)                 |
-| 12  | Graph (DFT, BFT)                               | [12-graph.js](JS/12-graph.js)                         |
-| 13  | Big O (O(1), O(n), O(n²))                      | [13-bigO.js](JS/13-bigO.js)                           |
-| 14  | Sequence ADT                                   | [14-sequenceADT.js](JS/14-sequenceADT.js)             |
-| 15  | Recursion (advanced)                           | [15-recursionAdvanced.js](JS/15-recursionAdvanced.js) |
-| 16  | Exam helpers                                   | [16-examHelpers.js](JS/16-examHelpers.js)             |
+Short JS notes with comments in **[dsa-cheatsheet-js/](dsa-cheatsheet-js/)** (see [dsa-cheatsheet-js/README.md](dsa-cheatsheet-js/README.md)):
 
-**Run one file:** `node JS/01-sameFrequency.js`  
-**Run all:** `node JS/run-all.js`
+| #   | Topic               | File                                                                                     |
+| --- | ------------------- | ---------------------------------------------------------------------------------------- |
+| 01  | Arrays              | [arrays-cheatsheet.js](dsa-cheatsheet-js/arrays-cheatsheet.js)                           |
+| 02  | Hash Tables         | [hash-tables-cheatsheet.js](dsa-cheatsheet-js/hash-tables-cheatsheet.js)                 |
+| 03  | Linked Lists        | [linked-list-cheatsheet.js](dsa-cheatsheet-js/linked-list-cheatsheet.js)                 |
+| 04  | Stacks & Queues     | [stacks-queues-cheatsheet.js](dsa-cheatsheet-js/stacks-queues-cheatsheet.js)             |
+| 05  | Trees               | [trees-cheatsheet.js](dsa-cheatsheet-js/trees-cheatsheet.js)                             |
+| 06  | Tries               | [trie-cheatsheet.js](dsa-cheatsheet-js/trie-cheatsheet.js)                               |
+| 07  | Graphs              | [graphs-cheatsheet.js](dsa-cheatsheet-js/graphs-cheatsheet.js)                           |
+| 08  | Recursion           | [recursion-cheatsheet.js](dsa-cheatsheet-js/recursion-cheatsheet.js)                     |
+| 09  | Sorting             | [sorting-cheatsheet.js](dsa-cheatsheet-js/sorting-cheatsheet.js)                         |
+| 10  | Searching           | [searching-cheatsheet.js](dsa-cheatsheet-js/searching-cheatsheet.js)                     |
+| 11  | Dynamic Programming | [dynamic-programming-cheatsheet.js](dsa-cheatsheet-js/dynamic-programming-cheatsheet.js) |
+
+**Run:** `cd dsa-cheatsheet-js && node arrays-cheatsheet.js` (or any `*-cheatsheet.js`).
+
+---
+
+## Table of Contents — JS (runnable examples)
+
+Short, runnable JavaScript examples in **[dsa-examples-js/](dsa-examples-js/)** (see [dsa-examples-js/README.md](dsa-examples-js/README.md)). **# = difficulty / technical challenge** (01 = easiest → 16 = hardest):
+
+| #   | Topic                                          | File                                                               |
+| --- | ---------------------------------------------- | ------------------------------------------------------------------ |
+| 01  | Same digit frequency                           | [01-sameFrequency.js](dsa-examples-js/01-sameFrequency.js)         |
+| 02  | Big O (O(1), O(n), O(n²))                      | [02-bigO.js](dsa-examples-js/02-bigO.js)                           |
+| 03  | Classes (instance + static)                    | [03-classes.js](dsa-examples-js/03-classes.js)                     |
+| 04  | Recursion (countdown, factorial, collect odds) | [04-recursion.js](dsa-examples-js/04-recursion.js)                 |
+| 05  | Stack (LIFO)                                   | [05-stack.js](dsa-examples-js/05-stack.js)                         |
+| 06  | Queue (FIFO)                                   | [06-queue.js](dsa-examples-js/06-queue.js)                         |
+| 07  | Single Linked List                             | [07-singleLinkedList.js](dsa-examples-js/07-singleLinkedList.js)   |
+| 08  | Double Linked List                             | [08-doubleLinkedList.js](dsa-examples-js/08-doubleLinkedList.js)   |
+| 09  | Hash Table                                     | [09-hashTable.js](dsa-examples-js/09-hashTable.js)                 |
+| 10  | Sequence ADT                                   | [10-sequenceADT.js](dsa-examples-js/10-sequenceADT.js)             |
+| 11  | Binary Search Tree                             | [11-binarySearchTree.js](dsa-examples-js/11-binarySearchTree.js)   |
+| 12  | Max Binary Heap                                | [12-maxBinaryHeap.js](dsa-examples-js/12-maxBinaryHeap.js)         |
+| 13  | Priority Queue (min-heap)                      | [13-priorityQueue.js](dsa-examples-js/13-priorityQueue.js)         |
+| 14  | Recursion (advanced)                           | [14-recursionAdvanced.js](dsa-examples-js/14-recursionAdvanced.js) |
+| 15  | Graph (DFT, BFT)                               | [15-graph.js](dsa-examples-js/15-graph.js)                         |
+| 16  | Exam helpers                                   | [16-examHelpers.js](dsa-examples-js/16-examHelpers.js)             |
+
+**Run one file:** `node dsa-examples-js/01-sameFrequency.js`  
+**Run all:** `node dsa-examples-js/run-all.js` (runs in difficulty order)
+
+---
+
+**Other:** [ZTM/](ZTM/) — TypeScript/JS course exercises. [sd421/](sd421/), [sd421_2/](sd421_2/), [TS_file/](TS_file/) — additional implementations.

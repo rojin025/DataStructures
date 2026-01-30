@@ -2,7 +2,9 @@
  * Max Binary Heap — parent > children, insert, extractMax.
  */
 class MaxBinaryHeap {
-  constructor() { this.values = []; }
+  constructor() {
+    this.values = [];
+  }
   insert(val) {
     this.values.push(val);
     let i = this.values.length - 1;
@@ -22,12 +24,18 @@ class MaxBinaryHeap {
       this.values[0] = end;
       let i = 0;
       while (true) {
-        const L = 2 * i + 1, R = 2 * i + 2;
+        const L = 2 * i + 1,
+          R = 2 * i + 2;
         let largest = i;
-        if (L < this.values.length && this.values[L] > this.values[largest]) largest = L;
-        if (R < this.values.length && this.values[R] > this.values[largest]) largest = R;
+        if (L < this.values.length && this.values[L] > this.values[largest])
+          largest = L;
+        if (R < this.values.length && this.values[R] > this.values[largest])
+          largest = R;
         if (largest === i) break;
-        [this.values[i], this.values[largest]] = [this.values[largest], this.values[i]];
+        [this.values[i], this.values[largest]] = [
+          this.values[largest],
+          this.values[i],
+        ];
         i = largest;
       }
     }
@@ -36,6 +44,6 @@ class MaxBinaryHeap {
 }
 
 const heap = new MaxBinaryHeap();
-[10, 5, 13, 11, 2, 16, 7].forEach(v => heap.insert(v));
+[10, 5, 13, 11, 2, 16, 7].forEach((v) => heap.insert(v));
 console.log(heap.values);
 console.log(heap.extractMax(), heap.values);

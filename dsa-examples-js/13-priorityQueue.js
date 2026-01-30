@@ -2,10 +2,15 @@
  * Priority Queue — min-heap by priority, enqueue(val, priority), dequeue().
  */
 class PQNode {
-  constructor(val, priority) { this.val = val; this.priority = priority; }
+  constructor(val, priority) {
+    this.val = val;
+    this.priority = priority;
+  }
 }
 class PriorityQueue {
-  constructor() { this.values = []; }
+  constructor() {
+    this.values = [];
+  }
   enqueue(val, priority) {
     const n = new PQNode(val, priority);
     this.values.push(n);
@@ -26,12 +31,24 @@ class PriorityQueue {
       this.values[0] = end;
       let i = 0;
       while (true) {
-        const L = 2 * i + 1, R = 2 * i + 2;
+        const L = 2 * i + 1,
+          R = 2 * i + 2;
         let smallest = i;
-        if (L < this.values.length && this.values[L].priority < this.values[smallest].priority) smallest = L;
-        if (R < this.values.length && this.values[R].priority < this.values[smallest].priority) smallest = R;
+        if (
+          L < this.values.length &&
+          this.values[L].priority < this.values[smallest].priority
+        )
+          smallest = L;
+        if (
+          R < this.values.length &&
+          this.values[R].priority < this.values[smallest].priority
+        )
+          smallest = R;
         if (smallest === i) break;
-        [this.values[i], this.values[smallest]] = [this.values[smallest], this.values[i]];
+        [this.values[i], this.values[smallest]] = [
+          this.values[smallest],
+          this.values[i],
+        ];
         i = smallest;
       }
     }
@@ -40,5 +57,7 @@ class PriorityQueue {
 }
 
 const pq = new PriorityQueue();
-pq.enqueue("cold", 5); pq.enqueue("gunshot", 1); pq.enqueue("fever", 4);
+pq.enqueue("cold", 5);
+pq.enqueue("gunshot", 1);
+pq.enqueue("fever", 4);
 console.log(pq.dequeue(), pq.dequeue(), pq.dequeue());

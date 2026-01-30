@@ -2,23 +2,40 @@
  * Single Linked List — push, pop, get, reverse.
  */
 class Node {
-  constructor(val) { this.val = val; this.next = null; }
+  constructor(val) {
+    this.val = val;
+    this.next = null;
+  }
 }
 class SingleLinkedList {
-  constructor() { this.head = null; this.length = 0; }
+  constructor() {
+    this.head = null;
+    this.length = 0;
+  }
   push(val) {
     const n = new Node(val);
     if (!this.head) this.head = n;
-    else { let cur = this.head; while (cur.next) cur = cur.next; cur.next = n; }
+    else {
+      let cur = this.head;
+      while (cur.next) cur = cur.next;
+      cur.next = n;
+    }
     this.length++;
     return this;
   }
   pop() {
     if (!this.head) return undefined;
-    if (this.length === 1) { const v = this.head.val; this.head = null; this.length = 0; return v; }
+    if (this.length === 1) {
+      const v = this.head.val;
+      this.head = null;
+      this.length = 0;
+      return v;
+    }
     let cur = this.head;
     while (cur.next.next) cur = cur.next;
-    const v = cur.next.val; cur.next = null; this.length--;
+    const v = cur.next.val;
+    cur.next = null;
+    this.length--;
     return v;
   }
   get(i) {
@@ -28,8 +45,14 @@ class SingleLinkedList {
     return cur.val;
   }
   reverse() {
-    let prev = null, cur = this.head;
-    while (cur) { const next = cur.next; cur.next = prev; prev = cur; cur = next; }
+    let prev = null,
+      cur = this.head;
+    while (cur) {
+      const next = cur.next;
+      cur.next = prev;
+      prev = cur;
+      cur = next;
+    }
     this.head = prev;
     return this;
   }

@@ -2,21 +2,36 @@
  * Binary Search Tree — insert, find, BFS, DFS (pre/in/post order).
  */
 class BSTNode {
-  constructor(val) { this.val = val; this.left = null; this.right = null; }
+  constructor(val) {
+    this.val = val;
+    this.left = null;
+    this.right = null;
+  }
 }
 class BinarySearchTree {
-  constructor() { this.root = null; }
+  constructor() {
+    this.root = null;
+  }
   insert(val) {
     const n = new BSTNode(val);
-    if (!this.root) { this.root = n; return this; }
+    if (!this.root) {
+      this.root = n;
+      return this;
+    }
     let cur = this.root;
     while (true) {
       if (val === cur.val) return this;
       if (val < cur.val) {
-        if (!cur.left) { cur.left = n; return this; }
+        if (!cur.left) {
+          cur.left = n;
+          return this;
+        }
         cur = cur.left;
       } else {
-        if (!cur.right) { cur.right = n; return this; }
+        if (!cur.right) {
+          cur.right = n;
+          return this;
+        }
         cur = cur.right;
       }
     }
@@ -30,7 +45,8 @@ class BinarySearchTree {
     return null;
   }
   BFS() {
-    const out = [], q = this.root ? [this.root] : [];
+    const out = [],
+      q = this.root ? [this.root] : [];
     while (q.length) {
       const n = q.shift();
       out.push(n.val);
@@ -41,20 +57,30 @@ class BinarySearchTree {
   }
   DFSPreOrder() {
     const out = [];
-    function go(n) { if (!n) return; out.push(n.val); go(n.left); go(n.right); }
+    function go(n) {
+      if (!n) return;
+      out.push(n.val);
+      go(n.left);
+      go(n.right);
+    }
     go(this.root);
     return out;
   }
   DFSInOrder() {
     const out = [];
-    function go(n) { if (!n) return; go(n.left); out.push(n.val); go(n.right); }
+    function go(n) {
+      if (!n) return;
+      go(n.left);
+      out.push(n.val);
+      go(n.right);
+    }
     go(this.root);
     return out;
   }
 }
 
 const bst = new BinarySearchTree();
-[10, 5, 13, 2, 7, 11, 16].forEach(v => bst.insert(v));
+[10, 5, 13, 2, 7, 11, 16].forEach((v) => bst.insert(v));
 console.log("BFS:", bst.BFS());
 console.log("PreOrder:", bst.DFSPreOrder());
 console.log("InOrder:", bst.DFSInOrder());
