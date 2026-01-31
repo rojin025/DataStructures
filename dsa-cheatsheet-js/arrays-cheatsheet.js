@@ -21,31 +21,45 @@ const staticExample = [1, 2, 3];
 
 // Dynamic: push/pop are O(1) at end
 const dynamic = [99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0];
-dynamic.push(100); // O(1) - add at end
-dynamic.pop(); // O(1) - remove from end
-dynamic.unshift(0); // O(n) - shift all elements
-dynamic.splice(2, 0, 999); // O(n) - insert at index
+dynamic.push(100); // O(1) - add at end → 12 (new length)
+dynamic.pop(); // O(1) - remove from end → 100 (removed element)
+dynamic.unshift(0); // O(n) - shift all elements → 12 (new length)
+// splice(start, deleteCount, ...items): start=index, deleteCount=how many to remove, items=to insert. Mutates; returns removed[]
+dynamic.splice(2, 0, 999); // O(n) — insert 999 at index 2, remove 0 → []; dynamic now has 999 at pos 2
+// e.g. splice(2, 1) removes 1 at 2; splice(2, 1, 999) replaces 1 at 2 with 999
 
 // Access by index - O(1)
 const first = dynamic[0];
 
 // Search - O(n) (must loop)
-const index = dynamic.indexOf(44);
+// Returns the index of 44 in dynamic (example: 1 if 44 is present at 1st index)
+const index = dynamic.indexOf(44); // index = 1
 
 // --- Method quick reference (mutating vs non-mutating) ---
 // Mutating: push, pop, shift, unshift, splice, sort, reverse, fill
 // Non-mutating (return new/derived): slice, concat, map, filter, reduce, flat, indexOf, includes
-dynamic.slice(1, 4);        // O(k) — copy subarray, no mutation
-dynamic.concat([5, 6]);     // O(n + m) — new array
-[...dynamic, 7];            // O(n) — spread copy + add
-dynamic.includes(44);       // O(n) — boolean search
-dynamic.reverse();          // O(n) — in-place (mutates!)
-dynamic.sort((a, b) => a - b); // O(n log n) — in-place; use comparator for numbers
+
+// Before operation: dynamic = [0, 99, 999, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0]
+dynamic.slice(1, 4);        // O(k) — copy subarray, no mutation → [99, 999, 44]
+// concat(...values): non-mutating; returns new array. Values can be arrays (flattened one level) or primitives (added as-is)
+dynamic.concat([5, 6]);     // O(n + m) — new array → [0, 99, 999, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0, 5, 6]
+[...dynamic, 7];            // O(n) — spread copy + add → [0, 99, 999, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0, 7]
+dynamic.includes(44);       // O(n) — boolean search → true
+dynamic.reverse();          // O(n) — in-place (mutates!) → [0, 4, 283, 87, 63, 5, 1, 2, 6, 44, 999, 99, 0]
+
+// Why O(n log n)?
+// Array.prototype.sort in JS (with a comparator) typically uses an optimized quicksort, mergesort, or timsort under the hood.
+// Sorting can't be done faster than O(n log n) for comparison sorts; "log n" levels (splits or merges), "n" comparisons per level.
+// See: https://en.wikipedia.org/wiki/Sorting_algorithm#Comparison_of_algorithms
+dynamic.sort((a, b) => a - b); // O(n log n) — in-place; use comparator for numbers → [0, 0, 1, 2, 4, 5, 6, 44, 63, 87, 99, 283, 999]
 
 // --- Creating / filling arrays ---
+// Array.from(arrayLike, mapFn?, thisArg?): arrayLike = iterable or { length }; mapFn(element, index) → value
 Array.from({ length: 5 }, (_, i) => i);   // [0,1,2,3,4]
 Array(5).fill(0);                          // [0,0,0,0,0] — same reference for objects!
-const grid = Array(3).fill(null).map(() => Array(3).fill(0)); // 3x3 matrix
+
+// Array(3) → sparse [empty×3]; .fill(null) so .map runs (map skips holes); map → 3 rows of Array(3).fill(0)
+const grid = Array(3).fill(null).map(() => Array(3).fill(0)); // 3x3 matrix → [[0,0,0],[0,0,0],[0,0,0]]
 
 // --- Copy gotcha: shallow vs “copy” ---
 const orig = [{ x: 1 }];

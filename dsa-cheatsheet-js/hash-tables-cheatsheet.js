@@ -16,11 +16,12 @@
 
 // Native JS: Map - flexible keys, preserves insertion order (by spec)
 const map = new Map();
-map.set("grapes", 10000); // O(1) average
-map.set(42, "answer");
+
+map.set("grapes", 10000); // O(1) average → [...map] → [['grapes', 10000]]
+map.set(42, "answer"); // O(1) average → [...map] → [['grapes', 10000], [42, 'answer']]
 map.get("grapes"); // 10000, O(1) average
-map.has("grapes"); // true
-map.delete("grapes"); // O(1) average
+map.has("grapes"); // true, O(1) average
+map.delete("grapes"); // O(1) average → [...map] → [[42, 'answer']]
 
 // Iteration (slower than array - "slow key iteration")
 for (const [key, value] of map) {
@@ -36,5 +37,7 @@ function simpleHash(key, size) {
   }
   return hash;
 }
+// simpleHash("grapes", 10) → e.g. 3
+// simpleHash(42, 10) → index for key 42
 
 module.exports = { map, simpleHash };
