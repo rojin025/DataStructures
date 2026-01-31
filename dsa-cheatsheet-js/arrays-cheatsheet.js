@@ -40,12 +40,12 @@ const index = dynamic.indexOf(44); // index = 1
 // Non-mutating (return new/derived): slice, concat, map, filter, reduce, flat, indexOf, includes
 
 // Before operation: dynamic = [0, 99, 999, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0]
-dynamic.slice(1, 4);        // O(k) — copy subarray, no mutation → [99, 999, 44]
+dynamic.slice(1, 4); // O(k) — copy subarray, no mutation → [99, 999, 44]
 // concat(...values): non-mutating; returns new array. Values can be arrays (flattened one level) or primitives (added as-is)
-dynamic.concat([5, 6]);     // O(n + m) — new array → [0, 99, 999, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0, 5, 6]
-[...dynamic, 7];            // O(n) — spread copy + add → [0, 99, 999, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0, 7]
-dynamic.includes(44);       // O(n) — boolean search → true
-dynamic.reverse();          // O(n) — in-place (mutates!) → [0, 4, 283, 87, 63, 5, 1, 2, 6, 44, 999, 99, 0]
+dynamic.concat([5, 6]); // O(n + m) — new array → [0, 99, 999, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0, 5, 6]
+[...dynamic, 7]; // O(n) — spread copy + add → [0, 99, 999, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0, 7]
+dynamic.includes(44); // O(n) — boolean search → true
+dynamic.reverse(); // O(n) — in-place (mutates!) → [0, 4, 283, 87, 63, 5, 1, 2, 6, 44, 999, 99, 0]
 
 // Why O(n log n)?
 // Array.prototype.sort in JS (with a comparator) typically uses an optimized quicksort, mergesort, or timsort under the hood.
@@ -55,16 +55,18 @@ dynamic.sort((a, b) => a - b); // O(n log n) — in-place; use comparator for nu
 
 // --- Creating / filling arrays ---
 // Array.from(arrayLike, mapFn?, thisArg?): arrayLike = iterable or { length }; mapFn(element, index) → value
-Array.from({ length: 5 }, (_, i) => i);   // [0,1,2,3,4]
-Array(5).fill(0);                          // [0,0,0,0,0] — same reference for objects!
+Array.from({ length: 5 }, (_, i) => i); // [0,1,2,3,4]
+Array(5).fill(0); // [0,0,0,0,0] — same reference for objects!
 
 // Array(3) → sparse [empty×3]; .fill(null) so .map runs (map skips holes); map → 3 rows of Array(3).fill(0)
-const grid = Array(3).fill(null).map(() => Array(3).fill(0)); // 3x3 matrix → [[0,0,0],[0,0,0],[0,0,0]]
+const grid = Array(3)
+  .fill(null)
+  .map(() => Array(3).fill(0)); // 3x3 matrix → [[0,0,0],[0,0,0],[0,0,0]]
 
 // --- Copy gotcha: shallow vs “copy” ---
 const orig = [{ x: 1 }];
-const shallow = [...orig];   // shallow: shallow[0] === orig[0]
-shallow[0].x = 99;           // mutates orig[0] too!
+const shallow = [...orig]; // shallow: shallow[0] === orig[0]
+shallow[0].x = 99; // mutates orig[0] too!
 const deep = JSON.parse(JSON.stringify(orig)); // deep copy (no functions/dates)
 
 // --- Classic DSA patterns (reference) ---
@@ -75,8 +77,9 @@ const deep = JSON.parse(JSON.stringify(orig)); // deep copy (no functions/dates)
 
 // Reverse in place (often needed)
 function reverseInPlace(arr) {
-  let l = 0, r = arr.length - 1;
-  while (l < r) [arr[l], arr[r]] = [arr[r], arr[l]], l++, r--;
+  let l = 0,
+    r = arr.length - 1;
+  while (l < r) ([arr[l], arr[r]] = [arr[r], arr[l]]), l++, r--;
 }
 
 module.exports = { staticExample, dynamic, reverseInPlace };
