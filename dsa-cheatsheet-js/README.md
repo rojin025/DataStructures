@@ -9,7 +9,7 @@ A **JavaScript** cheatsheet for data structures and algorithms: definitions, tim
 | **Arrays**              | `arrays-cheatsheet.js`              | Contiguous storage, access vs insert/delete |
 | **Hash Tables**         | `hash-tables-cheatsheet.js`         | Key-value, collisions, Map in JS            |
 | **Linked Lists**        | `linked-list-cheatsheet.js`         | Singly/doubly, reverse in place             |
-| **Stacks & Queues**     | `stacks-queues-cheatsheet.js`       | LIFO/FIFO, when to use each                 |
+| **Stacks & Queues**     | `stacks-queues-cheatsheet.js`       | LIFO/FIFO, array-with-methods + Stack/Queue classes |
 | **Trees**               | `trees-cheatsheet.js`               | BST, heap, traversals (in/pre/post-order)   |
 | **Tries**               | `trie-cheatsheet.js`                | Prefix tree, insert/search/startsWith       |
 | **Graphs**              | `graphs-cheatsheet.js`              | Adjacency list, BFS, DFS                    |

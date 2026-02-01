@@ -129,11 +129,13 @@ _From: Data Structures Cheatsheet (ZTM)._
 
 ## Hash table
 
-- **What:** Key → hash function → index; key-value pairs. Collisions: chaining or linear probing.
+- **What:** Key → hash function → index; key-value pairs. Collisions: linear probing, chaining, or resizing (e.g. double when ~60% full); good implementations keep ops O(1) on average.
 - **Time:** Search/Insert/Delete average O(1), worst O(n). **Space:** O(n).
+- **Use when:** Key-based lookup, counting, deduplication by key; flexible keys (any type in Map). **Avoid when:** You need order or to iterate all keys often (iteration slower than array).
+- **In JS:** Map (any key type, insertion order) or Set (keys only, no duplicates). Plain object for string keys. **Object vs Map:** Object = string keys, JSON, config; Map = any key, insertion order, no prototype keys. WeakMap = object keys only, no `.size`, keys can be GC'd (private/metadata).
 - **Good at:** Fast lookups\*, fast inserts, flexible keys. **Bad at:** Unordered, slow key iteration.
 
-**Run:** `node dsa-examples-js/09-hashTable.js` · **See also:** `TS_file/hashTable.ts`, `sd421_2/D1_Hash.ts`
+**Run:** `node dsa-examples-js/09-hashTable.js` · **Cheatsheet:** `dsa-cheatsheet-js/hash-tables-cheatsheet.js` · **See also:** `TS_file/hashTable.ts`, `sd421_2/D1_Hash.ts`
 
 ---
 
