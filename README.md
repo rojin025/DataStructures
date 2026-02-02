@@ -18,9 +18,10 @@ Short JS notes with comments in **[dsa-cheatsheet-js/](dsa-cheatsheet-js/)** (se
 | 06  | Tries               | [trie-cheatsheet.js](dsa-cheatsheet-js/trie-cheatsheet.js)                               |
 | 07  | Graphs              | [graphs-cheatsheet.js](dsa-cheatsheet-js/graphs-cheatsheet.js)                           |
 | 08  | Recursion           | [recursion-cheatsheet.js](dsa-cheatsheet-js/recursion-cheatsheet.js)                     |
-| 09  | Sorting             | [sorting-cheatsheet.js](dsa-cheatsheet-js/sorting-cheatsheet.js)                         |
-| 10  | Searching           | [searching-cheatsheet.js](dsa-cheatsheet-js/searching-cheatsheet.js)                     |
-| 11  | Dynamic Programming | [dynamic-programming-cheatsheet.js](dsa-cheatsheet-js/dynamic-programming-cheatsheet.js) |
+| 09  | Switch              | [switch-cheatsheet.js](dsa-cheatsheet-js/switch-cheatsheet.js)                           |
+| 10  | Sorting             | [sorting-cheatsheet.js](dsa-cheatsheet-js/sorting-cheatsheet.js)                         |
+| 11  | Searching           | [searching-cheatsheet.js](dsa-cheatsheet-js/searching-cheatsheet.js)                     |
+| 12  | Dynamic Programming | [dynamic-programming-cheatsheet.js](dsa-cheatsheet-js/dynamic-programming-cheatsheet.js) |
 
 **Run:** `cd dsa-cheatsheet-js && node arrays-cheatsheet.js` (or any `*-cheatsheet.js`).
 

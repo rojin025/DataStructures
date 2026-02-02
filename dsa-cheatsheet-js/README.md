@@ -14,6 +14,7 @@ A **JavaScript** cheatsheet for data structures and algorithms: definitions, tim
 | **Tries**               | `trie-cheatsheet.js`                | Prefix tree, insert/search/startsWith       |
 | **Graphs**              | `graphs-cheatsheet.js`              | Adjacency list, BFS, DFS                    |
 | **Recursion**           | `recursion-cheatsheet.js`           | Base case, factorial, fibonacci             |
+| **Switch**              | `switch-cheatsheet.js`              | Multi-way branch, fall-through, object dispatch |
 | **Sorting**             | `sorting-cheatsheet.js`             | Bubble, selection, insertion, merge, quick  |
 | **Searching**           | `searching-cheatsheet.js`           | Linear, binary search                       |
 | **Dynamic Programming** | `dynamic-programming-cheatsheet.js` | Memoization, caching, when to use DP        |
