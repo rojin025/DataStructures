@@ -67,7 +67,9 @@ const grid = Array(3)
 const orig = [{ x: 1 }];
 const shallow = [...orig]; // shallow: shallow[0] === orig[0]
 shallow[0].x = 99; // mutates orig[0] too!
-const deep = JSON.parse(JSON.stringify(orig)); // deep copy (no functions/dates)
+// deep copy (no functions/dates); deep[0].x = 99 does not affect orig
+const deep = JSON.parse(JSON.stringify(orig));
+deep[0].x = 99; // does not affect orig[0]
 
 // --- Classic DSA patterns (reference) ---
 // Two pointers (e.g. two-sum, palindrome): left=0, right=len-1 or both from start
