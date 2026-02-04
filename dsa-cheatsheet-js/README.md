@@ -4,20 +4,21 @@ A **JavaScript** cheatsheet for data structures and algorithms: definitions, tim
 
 ## Contents
 
-| Topic                   | File                                | Focus                                       |
-| ----------------------- | ----------------------------------- | ------------------------------------------- |
-| **Arrays**              | `arrays-cheatsheet.js`              | Contiguous storage, access vs insert/delete |
-| **Hash Tables**         | `hash-tables-cheatsheet.js`         | Key-value, collisions, Map in JS            |
-| **Linked Lists**        | `linked-list-cheatsheet.js`         | Singly/doubly, reverse in place             |
-| **Stacks & Queues**     | `stacks-queues-cheatsheet.js`       | LIFO/FIFO, array-with-methods + Stack/Queue classes |
-| **Trees**               | `trees-cheatsheet.js`               | BST, heap, traversals (in/pre/post-order)   |
-| **Tries**               | `trie-cheatsheet.js`                | Prefix tree, insert/search/startsWith       |
-| **Graphs**              | `graphs-cheatsheet.js`              | Adjacency list, BFS, DFS                    |
-| **Recursion**           | `recursion-cheatsheet.js`           | Base case, factorial, fibonacci             |
-| **Switch**              | `switch-cheatsheet.js`              | Multi-way branch, fall-through, object dispatch |
-| **Sorting**             | `sorting-cheatsheet.js`             | Bubble, selection, insertion, merge, quick  |
-| **Searching**           | `searching-cheatsheet.js`           | Linear, binary search                       |
-| **Dynamic Programming** | `dynamic-programming-cheatsheet.js` | Memoization, caching, when to use DP        |
+| Topic                   | File                                | Focus                                                  |
+| ----------------------- | ----------------------------------- | ------------------------------------------------------ |
+| **Arrays**              | `arrays-cheatsheet.js`              | Contiguous storage, access vs insert/delete            |
+| **JS Objects**          | `objects-cheatsheet.js`             | Plain objects, keys/values/entries, when to use vs Map |
+| **Hash Tables**         | `hash-tables-cheatsheet.js`         | Key-value, collisions, Map in JS                       |
+| **Linked Lists**        | `linked-list-cheatsheet.js`         | Singly/doubly, reverse in place                        |
+| **Stacks & Queues**     | `stacks-queues-cheatsheet.js`       | LIFO/FIFO, array-with-methods + Stack/Queue classes    |
+| **Trees**               | `trees-cheatsheet.js`               | BST, heap, traversals (in/pre/post-order)              |
+| **Tries**               | `trie-cheatsheet.js`                | Prefix tree, insert/search/startsWith                  |
+| **Graphs**              | `graphs-cheatsheet.js`              | Adjacency list, BFS, DFS                               |
+| **Recursion**           | `recursion-cheatsheet.js`           | Base case, factorial, fibonacci                        |
+| **Switch**              | `switch-cheatsheet.js`              | Multi-way branch, fall-through, object dispatch        |
+| **Sorting**             | `sorting-cheatsheet.js`             | Bubble, selection, insertion, merge, quick             |
+| **Searching**           | `searching-cheatsheet.js`           | Linear, binary search                                  |
+| **Dynamic Programming** | `dynamic-programming-cheatsheet.js` | Memoization, caching, when to use DP                   |
 
 ## Running
 

@@ -33,6 +33,13 @@ const memoized = memoizedAddTo80();
 /**
  * Fibonacci with memoization: avoid O(2^n) repeated calls by caching F(k) per k.
  */
+// Regular (naive) recursive Fibonacci: O(2^n), recomputes a lot
+function fibRegular(n) {
+  if (n < 2) return n;
+  return fibRegular(n - 1) + fibRegular(n - 2);
+}
+
+// Memoized Fibonacci: O(n), caches each computed value
 function fibMemo() {
   const cache = {};
   return function fib(n) {
