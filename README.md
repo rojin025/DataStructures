@@ -11,17 +11,18 @@ Short JS notes with comments in **[dsa-cheatsheet-js/](dsa-cheatsheet-js/)** (se
 | #   | Topic               | File                                                                                     |
 | --- | ------------------- | ---------------------------------------------------------------------------------------- |
 | 01  | Arrays              | [arrays-cheatsheet.js](dsa-cheatsheet-js/arrays-cheatsheet.js)                           |
-| 02  | Hash Tables         | [hash-tables-cheatsheet.js](dsa-cheatsheet-js/hash-tables-cheatsheet.js)                 |
-| 03  | Linked Lists        | [linked-list-cheatsheet.js](dsa-cheatsheet-js/linked-list-cheatsheet.js)                 |
-| 04  | Stacks & Queues     | [stacks-queues-cheatsheet.js](dsa-cheatsheet-js/stacks-queues-cheatsheet.js)             |
-| 05  | Trees               | [trees-cheatsheet.js](dsa-cheatsheet-js/trees-cheatsheet.js)                             |
-| 06  | Tries               | [trie-cheatsheet.js](dsa-cheatsheet-js/trie-cheatsheet.js)                               |
-| 07  | Graphs              | [graphs-cheatsheet.js](dsa-cheatsheet-js/graphs-cheatsheet.js)                           |
-| 08  | Recursion           | [recursion-cheatsheet.js](dsa-cheatsheet-js/recursion-cheatsheet.js)                     |
-| 09  | Switch              | [switch-cheatsheet.js](dsa-cheatsheet-js/switch-cheatsheet.js)                           |
-| 10  | Sorting             | [sorting-cheatsheet.js](dsa-cheatsheet-js/sorting-cheatsheet.js)                         |
-| 11  | Searching           | [searching-cheatsheet.js](dsa-cheatsheet-js/searching-cheatsheet.js)                     |
-| 12  | Dynamic Programming | [dynamic-programming-cheatsheet.js](dsa-cheatsheet-js/dynamic-programming-cheatsheet.js) |
+| 02  | JS Objects          | [objects-cheatsheet.js](dsa-cheatsheet-js/objects-cheatsheet.js)                         |
+| 03  | Hash Tables         | [hash-tables-cheatsheet.js](dsa-cheatsheet-js/hash-tables-cheatsheet.js)                 |
+| 04  | Linked Lists        | [linked-list-cheatsheet.js](dsa-cheatsheet-js/linked-list-cheatsheet.js)                 |
+| 05  | Stacks & Queues     | [stacks-queues-cheatsheet.js](dsa-cheatsheet-js/stacks-queues-cheatsheet.js)             |
+| 06  | Trees               | [trees-cheatsheet.js](dsa-cheatsheet-js/trees-cheatsheet.js)                             |
+| 07  | Tries               | [trie-cheatsheet.js](dsa-cheatsheet-js/trie-cheatsheet.js)                               |
+| 08  | Graphs              | [graphs-cheatsheet.js](dsa-cheatsheet-js/graphs-cheatsheet.js)                           |
+| 09  | Recursion           | [recursion-cheatsheet.js](dsa-cheatsheet-js/recursion-cheatsheet.js)                     |
+| 10  | Switch              | [switch-cheatsheet.js](dsa-cheatsheet-js/switch-cheatsheet.js)                           |
+| 11  | Sorting             | [sorting-cheatsheet.js](dsa-cheatsheet-js/sorting-cheatsheet.js)                         |
+| 12  | Searching           | [searching-cheatsheet.js](dsa-cheatsheet-js/searching-cheatsheet.js)                     |
+| 13  | Dynamic Programming | [dynamic-programming-cheatsheet.js](dsa-cheatsheet-js/dynamic-programming-cheatsheet.js) |
 
 **Run:** `cd dsa-cheatsheet-js && node arrays-cheatsheet.js` (or any `*-cheatsheet.js`).
 

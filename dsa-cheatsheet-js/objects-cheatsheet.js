@@ -52,7 +52,11 @@ const copy = { ...literal }; // shallow copy
 const merged = { ...literal, b: 99, e: 5 }; // later keys overwrite
 Object.assign({}, literal, { b: 99 }); // same idea, mutates first arg
 
-// Deep copy (no functions/dates/symbols): JSON.parse(JSON.stringify(obj))
+// Deep copy (no functions/dates/symbols):
+const original = { x: 1, y: { z: 2 } };
+const deepCopy = JSON.parse(JSON.stringify(original));
+deepCopy.y.z = 42;
+// original.y.z is still 2 — deepCopy does NOT mutate the original
 
 // ——— Immutability / integrity ———
 Object.freeze(literal); // no add/delete/change; Object.isFrozen(literal) → true
@@ -60,10 +64,18 @@ Object.seal(literal); // no add/delete, can change values; Object.isSealed(liter
 // Object.preventExtensions(obj) — no new keys only
 
 // ——— Destructuring ———
-const { a, b } = literal; // a=1, b=2
-const { a: x, b: y } = literal; // rename: x=1, y=2
-const { a, ...rest } = literal; // rest = { b: 2, c: 3 }
-const { missing = 0 } = literal; // default: missing = 0
+{
+  const { a, b } = literal;
+} // a=1, b=2
+{
+  const { a: x, b: y } = literal;
+} // rename: x=1, y=2
+{
+  const { a, ...rest } = literal;
+} // rest = { b: 2, c: 3 }
+{
+  const { missing = 0 } = literal;
+} // default: missing = 0
 
 // ——— DSA patterns ———
 // Count frequency: object as counter
