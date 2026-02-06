@@ -20,6 +20,8 @@ Short, runnable JavaScript examples. **File number = difficulty / technical chal
 | 14  | Recursion (advanced)                           | [14-recursionAdvanced.js](14-recursionAdvanced.js) |
 | 15  | Graph (DFT, BFT)                               | [15-graph.js](15-graph.js)                         |
 | 16  | Exam helpers                                   | [16-examHelpers.js](16-examHelpers.js)             |
+| 17  | String compression (consecutive char counts)   | [17-stringCompression.js](17-stringCompression.js) |
+| 18  | Longest substring without repeating chars     | [18-longestSubstringNoRepeat.js](18-longestSubstringNoRepeat.js) |
 
 **Run one file:** `node dsa-examples-js/01-sameFrequency.js` (from repo root)  
-**Run all:** `node dsa-examples-js/run-all.js` (runs 01 → 16 by difficulty)
+**Run all:** `node dsa-examples-js/run-all.js` (runs 01 → 18 by difficulty)
