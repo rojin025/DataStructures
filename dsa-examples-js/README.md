@@ -1,6 +1,6 @@
 # dsa-examples-js — Runnable DSA Examples
 
-Short, runnable JavaScript examples. **File number = difficulty / technical challenge** (01 = easiest → 16 = hardest). Run all with `node run-all.js` to go through in order.
+Short, runnable JavaScript examples. **File number = difficulty / technical challenge** (01 = easiest → 19 = hardest). Run all with `node run-all.js` to go through in order.
 
 | #   | Topic                                          | File                                               |
 | --- | ---------------------------------------------- | -------------------------------------------------- |
@@ -22,6 +22,7 @@ Short, runnable JavaScript examples. **File number = difficulty / technical chal
 | 16  | Exam helpers                                   | [16-examHelpers.js](16-examHelpers.js)             |
 | 17  | String compression (consecutive char counts)   | [17-stringCompression.js](17-stringCompression.js) |
 | 18  | Longest substring without repeating chars     | [18-longestSubstringNoRepeat.js](18-longestSubstringNoRepeat.js) |
+| 19  | Palindrome permutation detector               | [19-palindromePermutation.js](19-palindromePermutation.js)       |
 
 **Run one file:** `node dsa-examples-js/01-sameFrequency.js` (from repo root)  
-**Run all:** `node dsa-examples-js/run-all.js` (runs 01 → 18 by difficulty)
+**Run all:** `node dsa-examples-js/run-all.js` (runs 01 → 19 by difficulty)
