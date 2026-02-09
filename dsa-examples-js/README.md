@@ -25,6 +25,7 @@ Short, runnable JavaScript examples. **File number = difficulty / technical chal
 | 19  | Palindrome permutation detector               | [19-palindromePermutation.js](19-palindromePermutation.js)       |
 | 20  | String reversal (no .reverse())               | [20-stringReversal.js](20-stringReversal.js)                     |
 | 21  | First unique character                        | [21-firstUniqueCharacter.js](21-firstUniqueCharacter.js)         |
+| 22  | Merge intervals                               | [22-mergeIntervals.js](22-mergeIntervals.js)                     |
 
 **Run one file:** `node dsa-examples-js/01-sameFrequency.js` (from repo root)  
 **Run all:** `node dsa-examples-js/run-all.js` (runs 01 → 19 by difficulty)
