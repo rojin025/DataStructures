@@ -1,6 +1,6 @@
 # dsa-examples-js — Runnable DSA Examples
 
-Short, runnable JavaScript examples. **File number = difficulty / technical challenge** (01 = easiest → 19 = hardest). Run all with `node run-all.js` to go through in order.
+Short, runnable JavaScript examples. **File number = difficulty / technical challenge** (01 = easiest → 31). Run all with `node run-all.js` to go through in order.
 
 | #   | Topic                                          | File                                               |
 | --- | ---------------------------------------------- | -------------------------------------------------- |
@@ -27,6 +27,16 @@ Short, runnable JavaScript examples. **File number = difficulty / technical chal
 | 21  | First unique character                        | [21-firstUniqueCharacter.js](21-firstUniqueCharacter.js)         |
 | 22  | Merge intervals                               | [22-mergeIntervals.js](22-mergeIntervals.js)                     |
 | 23  | Maximum subarray sum (Kadane's algorithm)      | [23-maxSubarrayKadane.js](23-maxSubarrayKadane.js)               |
+| 24  | Two Sum                                       | [24-twoSum.js](24-twoSum.js)                                     |
+| 25  | Valid parentheses                             | [25-validParentheses.js](25-validParentheses.js)                 |
+| 26  | Reverse linked list (iterative)               | [26-reverseLinkedList.js](26-reverseLinkedList.js)               |
+| 27  | Merge two sorted lists                        | [27-mergeTwoSortedLists.js](27-mergeTwoSortedLists.js)           |
+| 28  | Kth largest element                           | [28-kthLargest.js](28-kthLargest.js)                             |
+| 29  | Level order traversal (BFS)                   | [29-levelOrderTraversal.js](29-levelOrderTraversal.js)           |
+| 30  | Top K frequent elements                       | [30-topKFrequent.js](30-topKFrequent.js)                         |
+| 31  | LRU Cache                                     | [31-lruCache.js](31-lruCache.js)                                 |
 
 **Run one file:** `node dsa-examples-js/01-sameFrequency.js` (from repo root)  
-**Run all:** `node dsa-examples-js/run-all.js` (runs 01 → 19 by difficulty)
+**Run all:** `node dsa-examples-js/run-all.js` (runs 01 → 31)
+
+**Testing:** Run regression tests: `node dsa-examples-js/run-tests.js`. Covers examples 18, 22, 23; more can be added by exporting the main function from an example and adding assertions in `run-tests.js`.

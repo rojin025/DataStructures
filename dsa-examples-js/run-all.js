@@ -7,7 +7,7 @@ const path = require("path");
 
 const dir = __dirname;
 const files = fs.readdirSync(dir)
-  .filter(f => f.endsWith(".js") && f !== "run-all.js")
+  .filter(f => f.endsWith(".js") && f !== "run-all.js" && f !== "run-tests.js")
   .sort();
 
 for (const file of files) {

@@ -29,3 +29,5 @@ console.log(mergeIntervals([
   { start: 8, end: 10 },
 ])); // [{ start: 1, end: 6 }, { start: 8, end: 10 }]
 console.log(mergeIntervals([{ start: 1, end: 4 }, { start: 4, end: 5 }])); // [{ start: 1, end: 5 }]
+
+module.exports = { mergeIntervals };

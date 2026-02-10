@@ -19,3 +19,5 @@ function maxSubarraySum(nums) {
 console.log(maxSubarraySum([-2, 1, -3, 4, -1, 2, 1, -5, 4])); // 6 (subarray [4, -1, 2, 1])
 console.log(maxSubarraySum([1]));                               // 1
 console.log(maxSubarraySum([5, 4, -1, 7, 8]));                  // 23 (whole array)
+
+module.exports = { maxSubarraySum };
