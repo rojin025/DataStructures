@@ -24,6 +24,15 @@ function findFactorialRecursive(num) {
   if (num === 2) return 2;
   return num * findFactorialRecursive(num - 1);
 }
+
+// --- Factorial recursive (memoized): cache avoids recomputation across calls ---
+const factorialCache = {};
+function findFactorialMemoized(num) {
+  if (num in factorialCache) return factorialCache[num];
+  if (num === 2) return 2;
+  factorialCache[num] = num * findFactorialMemoized(num - 1);
+  return factorialCache[num];
+}
 // findFactorialIterative(5) => 120
 
 // --- Example: Fibonacci (iterative) O(n) ---
@@ -46,6 +55,7 @@ function fibonacciRecursive(n) {
 module.exports = {
   findFactorialIterative,
   findFactorialRecursive,
+  findFactorialMemoized,
   fibonacciIterative,
   fibonacciRecursive,
 };
