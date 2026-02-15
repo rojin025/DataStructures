@@ -13,7 +13,22 @@
  *
  * Use when: Text, parsing, palindromes, pattern matching, building output from chars.
  * Avoid when: Heavy in-place edits (build array, join at end) or need key lookup (use Map).
+ *
+ * Mutating vs non-mutating: Strings are immutable. No string method mutates the original;
+ * all return a new string (or number/array). To "change" a string, reassign or build new.
  */
+
+// ——— No mutating methods ———
+// ❌ There are no string methods that modify the original. All of these return new values:
+//    slice, substring, concat, trim, toLowerCase, toUpperCase, replace, replaceAll, repeat, padStart, padEnd, etc.
+// To update the variable, reassign:
+let s1 = "  Hi  ";
+s1 = s1.trim();        // s1 is now "Hi"; original string was not changed, s1 points to new string
+s1 = s1.toUpperCase(); // s1 is now "HI"
+// For many edits, build an array and join at the end (avoids O(n²) from repeated + in a loop):
+const chars = ["h", "e", "l", "l", "o"];
+chars[0] = "H";        // array is mutable
+const s2 = chars.join(""); // "Hello" — new string
 
 // ——— Creation & length ———
 const s = "hello";
