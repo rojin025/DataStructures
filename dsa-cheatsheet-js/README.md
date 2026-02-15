@@ -7,6 +7,7 @@ A **JavaScript** cheatsheet for data structures and algorithms: definitions, tim
 | Topic                   | File                                | Focus                                                  |
 | ----------------------- | ----------------------------------- | ------------------------------------------------------ |
 | **Arrays**              | `arrays-cheatsheet.js`              | Contiguous storage, access vs insert/delete            |
+| **Strings**             | `strings-cheatsheet.js`             | Immutable, slice/split/join, search, replace, regex     |
 | **JS Objects**          | `objects-cheatsheet.js`             | Plain objects, keys/values/entries, when to use vs Map |
 | **Hash Tables**         | `hash-tables-cheatsheet.js`         | Key-value, collisions, Map in JS                       |
 | **Sets**                | `sets-cheatsheet.js`                | Unique values, O(1) membership, dedupe, set operations |
