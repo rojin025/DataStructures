@@ -10,4 +10,6 @@ Short strategy cheatsheets with **runnable JS** so you can practice each pattern
 
 **Run:** `node dsa-strategy/two-pointers-strategy.js`, `node dsa-strategy/binary-search-strategy.js`, or `node dsa-strategy/dfs-strategy.js`
 
+**Doc notes:** [Documents/dsa-strategy/](../Documents/dsa-strategy/) (e.g. [DFS Strategy](../Documents/dsa-strategy/DFS%20Strategy.md)).
+
 For full strategy list and “when to use” workflow, see the plan: [.cursor/plans/leetcode_strategies_reference.plan.md](../.cursor/plans/leetcode_strategies_reference.plan.md). For implementation details (arrays, linked lists, etc.), see [../dsa-cheatsheet-js/](../dsa-cheatsheet-js/).
