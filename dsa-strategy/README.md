@@ -5,8 +5,9 @@ Short strategy cheatsheets with **runnable JS** so you can practice each pattern
 | Strategy       | File                          | When to use |
 |----------------|-------------------------------|-------------|
 | Two Pointers   | [two-pointers-strategy.js](two-pointers-strategy.js) | Sorted array pair sum, palindromes, in-place dupes, linked list middle |
+| Binary Search  | [binary-search-strategy.js](binary-search-strategy.js) | Sorted/rotated array search, lower/upper bound, "min x such that …" (capacity, threshold) |
 | DFS            | [dfs-strategy.js](dfs-strategy.js) | Tree/graph traversal, path exists?, backtracking |
 
-**Run:** `node dsa-strategy/two-pointers-strategy.js` or `node dsa-strategy/dfs-strategy.js`
+**Run:** `node dsa-strategy/two-pointers-strategy.js`, `node dsa-strategy/binary-search-strategy.js`, or `node dsa-strategy/dfs-strategy.js`
 
 For full strategy list and “when to use” workflow, see the plan: [.cursor/plans/leetcode_strategies_reference.plan.md](../.cursor/plans/leetcode_strategies_reference.plan.md). For implementation details (arrays, linked lists, etc.), see [../dsa-cheatsheet-js/](../dsa-cheatsheet-js/).
