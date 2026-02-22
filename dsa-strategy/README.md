@@ -10,9 +10,10 @@ Short strategy cheatsheets with **runnable JS** so you can practice each pattern
 | Sliding Window | [sliding-window-strategy.js](sliding-window-strategy.js) | Contiguous subarray/substring: max sum of K, longest no repeat, min length sum ≥ target, at most K distinct |
 | DFS            | [dfs-strategy.js](dfs-strategy.js) | Tree/graph traversal, path exists?, backtracking |
 | BFS            | [bfs-strategy.js](bfs-strategy.js) | Shortest path (unweighted), level-order tree, word ladder, grid shortest path |
+| Dynamic programming | [dp-strategy.js](dp-strategy.js) | Max subarray (Kadane), climb stairs, coin change, 1D/2D memo, LCS |
 
-**Run:** `node dsa-strategy/hash-map-strategy.js`, `node dsa-strategy/two-pointers-strategy.js`, `node dsa-strategy/binary-search-strategy.js`, `node dsa-strategy/sliding-window-strategy.js`, `node dsa-strategy/dfs-strategy.js`, or `node dsa-strategy/bfs-strategy.js`
+**Run:** `node dsa-strategy/hash-map-strategy.js`, `node dsa-strategy/two-pointers-strategy.js`, `node dsa-strategy/binary-search-strategy.js`, `node dsa-strategy/sliding-window-strategy.js`, `node dsa-strategy/dfs-strategy.js`, `node dsa-strategy/bfs-strategy.js`, or `node dsa-strategy/dp-strategy.js`
 
-**Doc notes:** [Documents/dsa-strategy/](../Documents/dsa-strategy/) (e.g. [Hash Map Strategy](../Documents/dsa-strategy/Hash%20Map%20Strategy.md), [DFS Strategy](../Documents/dsa-strategy/DFS%20Strategy.md), [BFS Strategy](../Documents/dsa-strategy/BFS%20Strategy.md)).
+**Doc notes:** [Documents/dsa-strategy/](../Documents/dsa-strategy/) (e.g. [Hash Map Strategy](../Documents/dsa-strategy/Hash%20Map%20Strategy.md), [DFS Strategy](../Documents/dsa-strategy/DFS%20Strategy.md), [BFS Strategy](../Documents/dsa-strategy/BFS%20Strategy.md), [DP Strategy](../Documents/dsa-strategy/DP%20Strategy.md)).
 
 For full strategy list and “when to use” workflow, see the plan: [.cursor/plans/leetcode_strategies_reference.plan.md](../.cursor/plans/leetcode_strategies_reference.plan.md). For implementation details (arrays, linked lists, etc.), see [../dsa-cheatsheet-js/](../dsa-cheatsheet-js/).
